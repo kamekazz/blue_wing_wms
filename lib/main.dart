@@ -44,11 +44,8 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          widget.title,
-          style: Theme.of(context).textTheme.headline3,
-        ),
-      ),
+          title: const Image(
+              image: AssetImage('assets/logo/Supplyhouse_logo.png'))),
       body: Padding(
           padding: const EdgeInsets.all(20.0),
           child: ListView(
@@ -68,7 +65,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ElevatedButton(
                   onPressed: () {}, child: const Text('Elevated Button')),
               OutlinedButton(
-                  onPressed: () {}, child: const Text('Outlined Button')),
+                  onPressed: () {}, child: const Text('Outlined Butto n')),
               const Padding(
                 padding: EdgeInsets.all(20.0),
                 child: Image(
