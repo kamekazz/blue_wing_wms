@@ -1,3 +1,4 @@
+import 'package:blue_winged_wms/src/app/auth/screens/splash/splash_screen.dart';
 import 'package:blue_winged_wms/src/utils/theme/theme.dart';
 import 'package:flutter/material.dart';
 
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: MyAppTheme.lightTheme,
       darkTheme: MyAppTheme.darkTheme,
       themeMode: ThemeMode.light,
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const SplashScreen(),
     );
   }
 }
