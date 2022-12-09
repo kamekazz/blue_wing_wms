@@ -1,4 +1,3 @@
-import 'package:blue_winged_wms/src/constants/colors.dart';
 import 'package:blue_winged_wms/src/utils/theme/theme.dart';
 import 'package:flutter/material.dart';
 
@@ -65,7 +64,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ElevatedButton(
                   onPressed: () {}, child: const Text('Elevated Button')),
               OutlinedButton(
-                  onPressed: () {}, child: const Text('Outlined Butto n')),
+                  onPressed: () {}, child: const Text('Outlined Button')),
               const Padding(
                 padding: EdgeInsets.all(20.0),
                 child: Image(
