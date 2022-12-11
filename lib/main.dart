@@ -1,6 +1,8 @@
 import 'package:blue_winged_wms/src/app/auth/screens/splash/splash_screen.dart';
+import 'package:blue_winged_wms/src/app/auth/screens/welcome/welcome.dart';
 import 'package:blue_winged_wms/src/utils/theme/theme.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,12 +14,12 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       title: 'Blue Winged',
       theme: MyAppTheme.lightTheme,
       darkTheme: MyAppTheme.darkTheme,
       themeMode: ThemeMode.light,
-      home: const SplashScreen(),
+      home: SplashScreen(),
     );
   }
 }
