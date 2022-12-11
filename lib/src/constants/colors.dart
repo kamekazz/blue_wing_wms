@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 
 /* -- LIST OF ALL COLORS -- */
 
-const myPrimaryColor = Color.fromARGB(255, 53, 24, 19);
-const mySecondaryColor = Color.fromARGB(255, 96, 55, 36);
-const myAccentColor = Color.fromARGB(255, 183, 130, 80);
+const myPrimaryColor = Color.fromARGB(255, 96, 55, 36);
+const mySecondaryColor = Color.fromARGB(255, 183, 130, 80);
+const myAccentColor = Color.fromARGB(255, 53, 24, 19);
 
 const myWhiteColor = Colors.white;
 const myDarkColor = Color(0xff000000);
