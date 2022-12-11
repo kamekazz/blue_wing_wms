@@ -1,4 +1,4 @@
-import 'package:blue_winged_wms/src/app/auth/screens/on_boarding/on_boarding_screen.dart';
+import 'package:blue_winged_wms/src/app/auth/widgets/on_boarding/on_boarding_screen.dart';
 import 'package:get/get.dart';
 
 class SplashScreenController extends GetxController {
