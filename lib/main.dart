@@ -1,5 +1,4 @@
 import 'package:blue_winged_wms/src/app/auth/widgets/splash/splash_screen.dart';
-import 'package:blue_winged_wms/src/app/auth/widgets/welcome/welcome_screen.dart';
 import 'package:blue_winged_wms/src/utils/theme/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -20,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: MyAppTheme.lightTheme,
       darkTheme: MyAppTheme.darkTheme,
       themeMode: ThemeMode.system,
-      home: SplashScreen(),
+      home: const SplashScreen(),
     );
   }
 }
