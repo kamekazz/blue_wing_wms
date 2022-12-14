@@ -30,6 +30,17 @@ class SplashScreen extends StatelessWidget {
                 image: AssetImage(mySplashTopIcon),
               )),
           MyFadeAnimation(
+              durationInMs: 1200,
+              animatePosition: AnimatePosition(
+                topBefore: 0,
+                topAfter: 600,
+                leftBefore: 400,
+                leftAfter: 0,
+              ),
+              child: const Image(
+                image: AssetImage(mySplashTopIcon),
+              )),
+          MyFadeAnimation(
             durationInMs: 1600,
             animatePosition: AnimatePosition(
               topBefore: 80,

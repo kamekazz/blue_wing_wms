@@ -1,4 +1,5 @@
 import 'package:blue_winged_wms/src/app/auth/widgets/login/login_screen.dart';
+import 'package:blue_winged_wms/src/app/auth/widgets/signup/signup_screen.dart';
 import 'package:blue_winged_wms/src/constants/colors.dart';
 import 'package:blue_winged_wms/src/constants/image_strings.dart';
 import 'package:blue_winged_wms/src/constants/sizes.dart';
@@ -72,7 +73,9 @@ class WelcomeScreen extends StatelessWidget {
                         const SizedBox(width: 10.0),
                         Expanded(
                           child: ElevatedButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Get.to(() => const SignupScreen());
+                            },
                             style: ElevatedButton.styleFrom(
                               backgroundColor:
                                   isDarkMode ? Colors.amber : mySecondaryColor,

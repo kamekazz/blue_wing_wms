@@ -1,13 +1,13 @@
-import 'package:blue_winged_wms/src/app/auth/widgets/login/login_form.dart';
 import 'package:blue_winged_wms/src/app/auth/widgets/common_widget/auth_header_widget.dart';
+import 'package:blue_winged_wms/src/app/auth/widgets/login/login_form.dart';
+import 'package:blue_winged_wms/src/app/auth/widgets/signup/signup_form_widget.dart';
 import 'package:blue_winged_wms/src/constants/image_strings.dart';
 import 'package:blue_winged_wms/src/constants/sizes.dart';
 import 'package:blue_winged_wms/src/constants/text_strings.dart';
-
 import 'package:flutter/material.dart';
 
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({super.key});
+class SignupScreen extends StatelessWidget {
+  const SignupScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -23,13 +23,13 @@ class LoginScreen extends StatelessWidget {
 
                 const LoginHeaderWidget(
                   image: myWelcomeScreenImage,
-                  title: myLoginTitle,
-                  subTitle: myLoginSubTitle,
+                  title: mySignUpSubTitle,
+                  subTitle: mySignUpSubTitle,
                 ),
                 /* -- / end --*/
 
                 /* -- Section 2  [Form] --*/
-                const LoginForm(),
+                SignUpFormWidget(),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
@@ -53,11 +53,11 @@ class LoginScreen extends StatelessWidget {
                     TextButton(
                         onPressed: () {},
                         child: Text.rich(TextSpan(
-                            text: myDontHaveAnAccount,
+                            text: myAlreadyHaveAnAccount,
                             style: Theme.of(context).textTheme.bodyText1,
                             children: const [
                               TextSpan(
-                                  text: mySignup,
+                                  text: myLogin,
                                   style: TextStyle(color: Colors.blue))
                             ])))
                   ],

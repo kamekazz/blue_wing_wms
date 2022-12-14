@@ -3,28 +3,31 @@ import 'package:blue_winged_wms/src/constants/text_strings.dart';
 import 'package:flutter/material.dart';
 
 class LoginHeaderWidget extends StatelessWidget {
-  const LoginHeaderWidget({
-    Key? key,
-    required this.size,
-  }) : super(key: key);
+  const LoginHeaderWidget(
+      {Key? key,
+      required this.image,
+      required this.title,
+      required this.subTitle})
+      : super(key: key);
 
-  final Size size;
+  final String image, title, subTitle;
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Image(
-          image: const AssetImage(myWelcomeScreenImage),
+          image: AssetImage(image),
           height: size.height * 0.2,
         ),
         Text(
-          myLoginTitle,
+          title,
           style: Theme.of(context).textTheme.headline1,
         ),
         Text(
-          myLoginSubTitle,
+          subTitle,
           style: Theme.of(context).textTheme.bodyText1,
         ),
       ],
