@@ -1,3 +1,4 @@
+import 'package:blue_winged_wms/src/app/auth/widgets/login/login_screen.dart';
 import 'package:blue_winged_wms/src/constants/colors.dart';
 import 'package:blue_winged_wms/src/constants/image_strings.dart';
 import 'package:blue_winged_wms/src/constants/sizes.dart';
@@ -62,7 +63,9 @@ class WelcomeScreen extends StatelessWidget {
                       children: [
                         Expanded(
                           child: OutlinedButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Get.to(() => const LoginScreen());
+                            },
                             child: Text(myLogin.toUpperCase()),
                           ),
                         ),
