@@ -21,8 +21,8 @@ class LoginForm extends StatelessWidget {
           TextFormField(
               decoration: const InputDecoration(
                   prefixIcon: Icon(Icons.person_outline_outlined),
-                  labelText: myEmail,
-                  hintText: myEmail,
+                  labelText: ttEmail,
+                  hintText: ttEmail,
                   border: OutlineInputBorder())),
           const SizedBox(
             height: myFormHeight,
@@ -30,8 +30,8 @@ class LoginForm extends StatelessWidget {
           TextFormField(
               decoration: const InputDecoration(
                   prefixIcon: Icon(Icons.fingerprint),
-                  labelText: myPassword,
-                  hintText: myPassword,
+                  labelText: ttPassword,
+                  hintText: ttPassword,
                   border: OutlineInputBorder(),
                   suffixIcon: IconButton(
                       onPressed: null,
@@ -45,14 +45,14 @@ class LoginForm extends StatelessWidget {
               onPressed: () {
                 ForgetPasswordScreen.buildShowModalBottomSheet(context);
               },
-              child: const Text(myForgetPassword),
+              child: const Text(ttForgetPassword),
             ),
           ),
           SizedBox(
             width: double.infinity,
             child: ElevatedButton(
               onPressed: () {},
-              child: Text(myLogin.toLowerCase()),
+              child: Text(ttLogin.toLowerCase()),
             ),
           )
         ],

@@ -53,9 +53,9 @@ class WelcomeScreen extends StatelessWidget {
                             height: height * 0.6)),
                     Column(
                       children: [
-                        Text(myWelcomeTitle,
+                        Text(ttWelcomeTitle,
                             style: Theme.of(context).textTheme.headline2),
-                        Text(myWelcomeSubTitle,
+                        Text(ttWelcomeSubTitle,
                             style: Theme.of(context).textTheme.bodyText1,
                             textAlign: TextAlign.center),
                       ],
@@ -67,7 +67,7 @@ class WelcomeScreen extends StatelessWidget {
                             onPressed: () {
                               Get.to(() => const LoginScreen());
                             },
-                            child: Text(myLogin.toUpperCase()),
+                            child: Text(ttLogin.toUpperCase()),
                           ),
                         ),
                         const SizedBox(width: 10.0),
@@ -80,7 +80,7 @@ class WelcomeScreen extends StatelessWidget {
                               backgroundColor:
                                   isDarkMode ? Colors.amber : mySecondaryColor,
                             ),
-                            child: Text(mySignup.toUpperCase()),
+                            child: Text(ttSignup.toUpperCase()),
                           ),
                         ),
                       ],

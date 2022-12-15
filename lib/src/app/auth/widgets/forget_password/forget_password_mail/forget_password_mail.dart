@@ -24,8 +24,8 @@ class ForgetPasswordMailScreen extends StatelessWidget {
                 const SizedBox(height: myDefaultSize * 4),
                 const LoginHeaderWidget(
                   image: myForgetPasswordImage,
-                  title: myForgetPassword,
-                  subTitle: myForgetPasswordSubTitle,
+                  title: ttForgetPassword,
+                  subTitle: ttForgetPasswordSubTitle,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   heightBetween: 30.0,
                   textAlign: TextAlign.center,
@@ -36,8 +36,8 @@ class ForgetPasswordMailScreen extends StatelessWidget {
                     children: [
                       TextFormField(
                         decoration: const InputDecoration(
-                          label: Text(myEmail),
-                          hintText: myEmail,
+                          label: Text(ttEmail),
+                          hintText: ttEmail,
                           prefixIcon: Icon(Icons.mail_outline_rounded),
                         ),
                       ),
@@ -45,7 +45,7 @@ class ForgetPasswordMailScreen extends StatelessWidget {
                       SizedBox(
                         width: double.infinity,
                         child: ElevatedButton(
-                            onPressed: () {}, child: const Text(myNext)),
+                            onPressed: () {}, child: const Text(ttNext)),
                       )
                     ],
                   ),

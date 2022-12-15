@@ -24,8 +24,8 @@ class SignupScreen extends StatelessWidget {
 
                 const LoginHeaderWidget(
                   image: myWelcomeScreenImage,
-                  title: mySignUpSubTitle,
-                  subTitle: mySignUpSubTitle,
+                  title: ttSignUpSubTitle,
+                  subTitle: ttSignUpSubTitle,
                 ),
                 /* -- / end --*/
 
@@ -46,7 +46,7 @@ class SignupScreen extends StatelessWidget {
                             image: AssetImage(myGoogleLogoImage),
                             width: 20.0,
                           ),
-                          label: const Text(mySignInWithGoogle)),
+                          label: const Text(ttSignInWithGoogle)),
                     ),
                     const SizedBox(
                       height: myFormHeight - 20,
@@ -56,11 +56,11 @@ class SignupScreen extends StatelessWidget {
                           Get.to(() => const LoginScreen());
                         },
                         child: Text.rich(TextSpan(
-                            text: myAlreadyHaveAnAccount,
+                            text: ttAlreadyHaveAnAccount,
                             style: Theme.of(context).textTheme.bodyText1,
                             children: const [
                               TextSpan(
-                                  text: myLogin,
+                                  text: ttLogin,
                                   style: TextStyle(color: Colors.blue))
                             ])))
                   ],

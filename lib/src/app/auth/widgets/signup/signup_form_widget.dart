@@ -17,7 +17,7 @@ class SignUpFormWidget extends StatelessWidget {
         children: [
           TextFormField(
             decoration: const InputDecoration(
-                label: Text(myFullName),
+                label: Text(ttFullName),
                 prefixIcon: Icon(Icons.person_outline_rounded)),
           ),
           const SizedBox(
@@ -25,7 +25,7 @@ class SignUpFormWidget extends StatelessWidget {
           ),
           TextFormField(
             decoration: const InputDecoration(
-                label: Text(myEmail),
+                label: Text(ttEmail),
                 prefixIcon: Icon(Icons.person_outline_rounded)),
           ),
           const SizedBox(
@@ -33,7 +33,7 @@ class SignUpFormWidget extends StatelessWidget {
           ),
           TextFormField(
             decoration: const InputDecoration(
-                label: Text(myPhoneNo),
+                label: Text(ttPhoneNo),
                 prefixIcon: Icon(Icons.person_outline_rounded)),
           ),
           const SizedBox(
@@ -41,7 +41,7 @@ class SignUpFormWidget extends StatelessWidget {
           ),
           TextFormField(
             decoration: const InputDecoration(
-                label: Text(myPhoneNo),
+                label: Text(ttPhoneNo),
                 prefixIcon: Icon(Icons.person_outline_rounded)),
           ),
           const SizedBox(
@@ -50,7 +50,7 @@ class SignUpFormWidget extends StatelessWidget {
           SizedBox(
             width: double.infinity,
             child:
-                ElevatedButton(onPressed: () {}, child: const Text(mySignup)),
+                ElevatedButton(onPressed: () {}, child: const Text(ttSignup)),
           )
         ],
       )),

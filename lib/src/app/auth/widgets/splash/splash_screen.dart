@@ -52,11 +52,11 @@ class SplashScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  myAppName,
+                  ttAppName,
                   style: Theme.of(context).textTheme.headline5,
                 ),
                 Text(
-                  myAppTagLine,
+                  ttAppTagLine,
                   style: Theme.of(context).textTheme.headline2,
                 )
               ],
