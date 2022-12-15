@@ -1,5 +1,5 @@
-import 'package:blue_winged_wms/src/widgets/fade_animation.dart/fade_in_animation_controller.dart';
-import 'package:blue_winged_wms/src/widgets/fade_animation.dart/fade_model.dart';
+import 'package:blue_wing_wms/src/widgets/fade_animation.dart/fade_in_animation_controller.dart';
+import 'package:blue_wing_wms/src/widgets/fade_animation.dart/fade_model.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

@@ -1,5 +1,5 @@
-import 'package:blue_winged_wms/src/app/auth/widgets/splash/splash_screen.dart';
-import 'package:blue_winged_wms/src/utils/theme/theme.dart';
+import 'package:blue_wing_wms/src/app/auth/widgets/splash/splash_screen.dart';
+import 'package:blue_wing_wms/src/utils/theme/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

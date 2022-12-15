@@ -1,6 +1,6 @@
-import 'package:blue_winged_wms/src/constants/sizes.dart';
+import 'package:blue_wing_wms/src/constants/sizes.dart';
 import 'package:flutter/material.dart';
-import 'package:blue_winged_wms/src/constants/colors.dart';
+import 'package:blue_wing_wms/src/constants/colors.dart';
 
 /* -- Light & Dark Elevated Button Themes -- */
 class MyElevatedButtonTheme {

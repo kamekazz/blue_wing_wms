@@ -1,7 +1,7 @@
-import 'package:blue_winged_wms/src/utils/theme/appbar_theme.dart';
-import 'package:blue_winged_wms/src/utils/theme/elevated_button_theme.dart';
-import 'package:blue_winged_wms/src/utils/theme/text_field_theme.dart';
-import 'package:blue_winged_wms/src/utils/theme/text_theme.dart';
+import 'package:blue_wing_wms/src/utils/theme/appbar_theme.dart';
+import 'package:blue_wing_wms/src/utils/theme/elevated_button_theme.dart';
+import 'package:blue_wing_wms/src/utils/theme/text_field_theme.dart';
+import 'package:blue_wing_wms/src/utils/theme/text_theme.dart';
 import 'package:flutter/material.dart';
 
 import 'outlined_button_theme.dart';

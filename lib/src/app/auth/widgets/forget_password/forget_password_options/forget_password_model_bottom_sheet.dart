@@ -1,4 +1,4 @@
-import 'package:blue_winged_wms/src/app/auth/widgets/forget_password/forget_password_mail/forget_password_mail.dart';
+import 'package:blue_wing_wms/src/app/auth/widgets/forget_password/forget_password_mail/forget_password_mail.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../../../../constants/sizes.dart';

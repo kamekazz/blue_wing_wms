@@ -1,5 +1,5 @@
-import 'package:blue_winged_wms/src/constants/sizes.dart';
-import 'package:blue_winged_wms/src/constants/text_strings.dart';
+import 'package:blue_wing_wms/src/constants/sizes.dart';
+import 'package:blue_wing_wms/src/constants/text_strings.dart';
 import 'package:flutter/material.dart';
 
 class SignUpFormWidget extends StatelessWidget {

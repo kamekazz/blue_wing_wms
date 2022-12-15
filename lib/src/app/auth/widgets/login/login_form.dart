@@ -1,9 +1,9 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
-import 'package:blue_winged_wms/src/app/auth/widgets/forget_password/forget_password_options/forget_password_model_bottom_sheet.dart';
+import 'package:blue_wing_wms/src/app/auth/widgets/forget_password/forget_password_options/forget_password_model_bottom_sheet.dart';
 import 'package:flutter/material.dart';
 
-import 'package:blue_winged_wms/src/constants/sizes.dart';
-import 'package:blue_winged_wms/src/constants/text_strings.dart';
+import 'package:blue_wing_wms/src/constants/sizes.dart';
+import 'package:blue_wing_wms/src/constants/text_strings.dart';
 
 class LoginForm extends StatelessWidget {
   const LoginForm({

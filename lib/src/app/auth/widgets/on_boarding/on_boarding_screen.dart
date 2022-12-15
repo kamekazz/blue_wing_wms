@@ -1,8 +1,8 @@
-import 'package:blue_winged_wms/src/app/auth/controllers/on_boarding_controller.dart';
-import 'package:blue_winged_wms/src/app/auth/models/on_boarding_model.dart';
-import 'package:blue_winged_wms/src/constants/colors.dart';
+import 'package:blue_wing_wms/src/app/auth/controllers/on_boarding_controller.dart';
+import 'package:blue_wing_wms/src/app/auth/models/on_boarding_model.dart';
+import 'package:blue_wing_wms/src/constants/colors.dart';
 
-import 'package:blue_winged_wms/src/constants/sizes.dart';
+import 'package:blue_wing_wms/src/constants/sizes.dart';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

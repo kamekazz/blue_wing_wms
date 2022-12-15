@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:blue_winged_wms/src/constants/colors.dart';
+import 'package:blue_wing_wms/src/constants/colors.dart';
 
 class MyTextFormFieldTheme {
   MyTextFormFieldTheme._();

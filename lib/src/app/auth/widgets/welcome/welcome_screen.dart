@@ -1,12 +1,12 @@
-import 'package:blue_winged_wms/src/app/auth/widgets/login/login_screen.dart';
-import 'package:blue_winged_wms/src/app/auth/widgets/signup/signup_screen.dart';
-import 'package:blue_winged_wms/src/constants/colors.dart';
-import 'package:blue_winged_wms/src/constants/image_strings.dart';
-import 'package:blue_winged_wms/src/constants/sizes.dart';
-import 'package:blue_winged_wms/src/constants/text_strings.dart';
-import 'package:blue_winged_wms/src/widgets/fade_animation.dart/fade_in_animation.dart';
-import 'package:blue_winged_wms/src/widgets/fade_animation.dart/fade_in_animation_controller.dart';
-import 'package:blue_winged_wms/src/widgets/fade_animation.dart/fade_model.dart';
+import 'package:blue_wing_wms/src/app/auth/widgets/login/login_screen.dart';
+import 'package:blue_wing_wms/src/app/auth/widgets/signup/signup_screen.dart';
+import 'package:blue_wing_wms/src/constants/colors.dart';
+import 'package:blue_wing_wms/src/constants/image_strings.dart';
+import 'package:blue_wing_wms/src/constants/sizes.dart';
+import 'package:blue_wing_wms/src/constants/text_strings.dart';
+import 'package:blue_wing_wms/src/widgets/fade_animation.dart/fade_in_animation.dart';
+import 'package:blue_wing_wms/src/widgets/fade_animation.dart/fade_in_animation_controller.dart';
+import 'package:blue_wing_wms/src/widgets/fade_animation.dart/fade_model.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

@@ -1,8 +1,8 @@
-import 'package:blue_winged_wms/src/app/auth/models/on_boarding_model.dart';
-import 'package:blue_winged_wms/src/app/auth/widgets/on_boarding/on_boarding_screen.dart';
-import 'package:blue_winged_wms/src/app/auth/widgets/welcome/welcome_screen.dart';
-import 'package:blue_winged_wms/src/constants/image_strings.dart';
-import 'package:blue_winged_wms/src/constants/text_strings.dart';
+import 'package:blue_wing_wms/src/app/auth/models/on_boarding_model.dart';
+import 'package:blue_wing_wms/src/app/auth/widgets/on_boarding/on_boarding_screen.dart';
+import 'package:blue_wing_wms/src/app/auth/widgets/welcome/welcome_screen.dart';
+import 'package:blue_wing_wms/src/constants/image_strings.dart';
+import 'package:blue_wing_wms/src/constants/text_strings.dart';
 import 'package:get/get.dart';
 import 'package:liquid_swipe/liquid_swipe.dart';
 
