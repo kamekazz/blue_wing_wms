@@ -24,7 +24,7 @@ class LoginScreen extends StatelessWidget {
                 /* -- Section 1  [Images] --*/
 
                 const LoginHeaderWidget(
-                  image: myWelcomeScreenImage,
+                  image: astWelcomeScreenImage,
                   title: ttLoginTitle,
                   subTitle: ttLoginSubTitle,
                 ),
@@ -44,7 +44,7 @@ class LoginScreen extends StatelessWidget {
                       child: OutlinedButton.icon(
                           onPressed: () {},
                           icon: const Image(
-                            image: AssetImage(myGoogleLogoImage),
+                            image: AssetImage(astGoogleLogoImage),
                             width: 20.0,
                           ),
                           label: const Text(ttSignInWithGoogle)),

@@ -36,21 +36,21 @@ class OnboardingController extends GetxController {
   final pages = [
     LiquidPage(
         model: OnBoardingModel(
-            image: myOnBoardingImage1,
+            image: astOnBoardingImage1,
             title: ttOnBoardingTitle1,
             subTitle: ttOnBoardingSubTitle1,
             counterText: ttOnBoardingCounter1,
             bgColor: ctOnBoardingPage1Color)),
     LiquidPage(
         model: OnBoardingModel(
-            image: myOnBoardingImage2,
+            image: astOnBoardingImage2,
             title: ttOnBoardingTitle2,
             subTitle: ttOnBoardingSubTitle2,
             counterText: ttOnBoardingCounter2,
             bgColor: ctOnBoardingPage2Color)),
     LiquidPage(
         model: OnBoardingModel(
-            image: myOnBoardingImage3,
+            image: astOnBoardingImage3,
             title: ttOnBoardingTitle3,
             subTitle: ttOnBoardingSubTitle3,
             counterText: ttOnBoardingCounter3,

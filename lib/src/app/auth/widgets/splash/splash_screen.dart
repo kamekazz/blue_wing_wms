@@ -27,7 +27,7 @@ class SplashScreen extends StatelessWidget {
                 leftAfter: 285,
               ),
               child: const Image(
-                image: AssetImage(mySplashTopIcon),
+                image: AssetImage(astSplashTopIcon),
               )),
           MyFadeAnimation(
               durationInMs: 1200,
@@ -38,7 +38,7 @@ class SplashScreen extends StatelessWidget {
                 leftAfter: 0,
               ),
               child: const Image(
-                image: AssetImage(mySplashTopIcon),
+                image: AssetImage(astSplashTopIcon),
               )),
           MyFadeAnimation(
             durationInMs: 1600,
@@ -67,7 +67,7 @@ class SplashScreen extends StatelessWidget {
               animatePosition:
                   AnimatePosition(bottomBefore: 0, bottomAfter: 100),
               child: const Image(
-                image: AssetImage(mySplashImage),
+                image: AssetImage(astSplashImage),
               )),
           MyFadeAnimation(
               durationInMs: 2000,
@@ -92,7 +92,7 @@ class SplashScreen extends StatelessWidget {
                 leftAfter: 285,
               ),
               child: const Image(
-                image: AssetImage(mySplashTopIcon),
+                image: AssetImage(astSplashTopIcon),
               )),
         ],
       ),
