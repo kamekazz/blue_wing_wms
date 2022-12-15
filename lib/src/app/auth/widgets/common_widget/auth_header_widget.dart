@@ -1,35 +1,42 @@
-import 'package:blue_winged_wms/src/constants/image_strings.dart';
-import 'package:blue_winged_wms/src/constants/text_strings.dart';
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 
 class LoginHeaderWidget extends StatelessWidget {
-  const LoginHeaderWidget(
-      {Key? key,
-      required this.image,
-      required this.title,
-      required this.subTitle})
-      : super(key: key);
+  const LoginHeaderWidget({
+    Key? key,
+    this.imageColor,
+    this.heightBetween,
+    required this.image,
+    required this.title,
+    required this.subTitle,
+    this.imageHeight = 0.2,
+    this.crossAxisAlignment = CrossAxisAlignment.start,
+    this.textAlign,
+  }) : super(key: key);
 
-  final String image, title, subTitle;
+  final Color? imageColor;
+  final double imageHeight;
+  final double? heightBetween;
+  final String image;
+  final String title;
+  final String subTitle;
+  final CrossAxisAlignment crossAxisAlignment;
+  final TextAlign? textAlign;
 
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
+      crossAxisAlignment: crossAxisAlignment,
       children: [
         Image(
-          image: AssetImage(image),
-          height: size.height * 0.2,
-        ),
-        Text(
-          title,
-          style: Theme.of(context).textTheme.headline1,
-        ),
-        Text(
-          subTitle,
-          style: Theme.of(context).textTheme.bodyText1,
-        ),
+            image: AssetImage(image),
+            color: imageColor,
+            height: size.height * imageHeight),
+        SizedBox(height: heightBetween),
+        Text(title, style: Theme.of(context).textTheme.headline1),
+        Text(subTitle,
+            textAlign: textAlign, style: Theme.of(context).textTheme.bodyText1),
       ],
     );
   }

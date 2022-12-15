@@ -1,6 +1,10 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
+import 'package:blue_winged_wms/src/app/auth/widgets/forget_password/forget_password_options/forget_password_btn_widget.dart';
+import 'package:blue_winged_wms/src/app/auth/widgets/forget_password/forget_password_options/forget_password_model_bottom_sheet.dart';
+import 'package:flutter/material.dart';
+
 import 'package:blue_winged_wms/src/constants/sizes.dart';
 import 'package:blue_winged_wms/src/constants/text_strings.dart';
-import 'package:flutter/material.dart';
 
 class LoginForm extends StatelessWidget {
   const LoginForm({
@@ -39,7 +43,9 @@ class LoginForm extends StatelessWidget {
           Align(
             alignment: Alignment.centerRight,
             child: TextButton(
-              onPressed: () {},
+              onPressed: () {
+                ForgetPasswordScreen.buildShowModalBottomSheet(context);
+              },
               child: const Text(myForgetPassword),
             ),
           ),
