@@ -1,11 +1,9 @@
 import 'package:blue_winged_wms/src/app/auth/widgets/common_widget/auth_header_widget.dart';
-import 'package:blue_winged_wms/src/constants/colors.dart';
+
 import 'package:blue_winged_wms/src/constants/image_strings.dart';
 import 'package:blue_winged_wms/src/constants/sizes.dart';
 import 'package:blue_winged_wms/src/constants/text_strings.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 
 class ForgetPasswordMailScreen extends StatelessWidget {
   const ForgetPasswordMailScreen({Key? key}) : super(key: key);
@@ -13,8 +11,8 @@ class ForgetPasswordMailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     //Just In-case if you want to replace the Image Color for Dark Theme
-    final brightness = MediaQuery.of(context).platformBrightness;
-    final bool isDark = brightness == Brightness.dark;
+    // final brightness = MediaQuery.of(context).platformBrightness;
+    // final bool isDark = brightness == Brightness.dark;
 
     return SafeArea(
       child: Scaffold(

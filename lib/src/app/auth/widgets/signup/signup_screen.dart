@@ -1,5 +1,4 @@
 import 'package:blue_winged_wms/src/app/auth/widgets/common_widget/auth_header_widget.dart';
-import 'package:blue_winged_wms/src/app/auth/widgets/login/login_form.dart';
 import 'package:blue_winged_wms/src/app/auth/widgets/login/login_screen.dart';
 import 'package:blue_winged_wms/src/app/auth/widgets/signup/signup_form_widget.dart';
 import 'package:blue_winged_wms/src/constants/image_strings.dart';
@@ -31,7 +30,7 @@ class SignupScreen extends StatelessWidget {
                 /* -- / end --*/
 
                 /* -- Section 2  [Form] --*/
-                SignUpFormWidget(),
+                const SignUpFormWidget(),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [

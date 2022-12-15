@@ -10,41 +10,41 @@ class SignUpFormWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(vertical: myFormHeight),
+      padding: const EdgeInsets.symmetric(vertical: myFormHeight),
       child: Form(
           child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           TextFormField(
-            decoration: InputDecoration(
+            decoration: const InputDecoration(
                 label: Text(myFullName),
                 prefixIcon: Icon(Icons.person_outline_rounded)),
           ),
-          SizedBox(
+          const SizedBox(
             height: myFormHeight - 20,
           ),
           TextFormField(
-            decoration: InputDecoration(
+            decoration: const InputDecoration(
                 label: Text(myEmail),
                 prefixIcon: Icon(Icons.person_outline_rounded)),
           ),
-          SizedBox(
+          const SizedBox(
             height: myFormHeight - 20,
           ),
           TextFormField(
-            decoration: InputDecoration(
+            decoration: const InputDecoration(
                 label: Text(myPhoneNo),
                 prefixIcon: Icon(Icons.person_outline_rounded)),
           ),
-          SizedBox(
+          const SizedBox(
             height: myFormHeight - 20,
           ),
           TextFormField(
-            decoration: InputDecoration(
+            decoration: const InputDecoration(
                 label: Text(myPhoneNo),
                 prefixIcon: Icon(Icons.person_outline_rounded)),
           ),
-          SizedBox(
+          const SizedBox(
             height: myFormHeight - 20,
           ),
           SizedBox(
