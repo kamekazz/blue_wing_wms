@@ -1,4 +1,4 @@
-# blue_winged_wms
+# blue_wing_wms
 
 A new Flutter project.
 
