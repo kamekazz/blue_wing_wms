@@ -1,10 +1,12 @@
 import 'package:blue_winged_wms/src/app/auth/widgets/common_widget/auth_header_widget.dart';
 import 'package:blue_winged_wms/src/app/auth/widgets/login/login_form.dart';
+import 'package:blue_winged_wms/src/app/auth/widgets/login/login_screen.dart';
 import 'package:blue_winged_wms/src/app/auth/widgets/signup/signup_form_widget.dart';
 import 'package:blue_winged_wms/src/constants/image_strings.dart';
 import 'package:blue_winged_wms/src/constants/sizes.dart';
 import 'package:blue_winged_wms/src/constants/text_strings.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class SignupScreen extends StatelessWidget {
   const SignupScreen({super.key});
@@ -51,7 +53,9 @@ class SignupScreen extends StatelessWidget {
                       height: myFormHeight - 20,
                     ),
                     TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Get.to(() => const LoginScreen());
+                        },
                         child: Text.rich(TextSpan(
                             text: myAlreadyHaveAnAccount,
                             style: Theme.of(context).textTheme.bodyText1,
