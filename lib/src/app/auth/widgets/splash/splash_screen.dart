@@ -74,11 +74,11 @@ class SplashScreen extends StatelessWidget {
               animatePosition: AnimatePosition(
                   bottomBefore: 0,
                   bottomAfter: 60,
-                  rightBefore: myDefaultSize,
-                  rightAfter: myDefaultSize),
+                  rightBefore: dtDefaultSize,
+                  rightAfter: dtDefaultSize),
               child: Container(
-                width: mySplashContainerSize,
-                height: mySplashContainerSize,
+                width: dtSplashContainerSize,
+                height: dtSplashContainerSize,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(100),
                     color: myPrimaryColor),

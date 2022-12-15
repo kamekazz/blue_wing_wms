@@ -25,7 +25,7 @@ class LoginForm extends StatelessWidget {
                   hintText: ttEmail,
                   border: OutlineInputBorder())),
           const SizedBox(
-            height: myFormHeight,
+            height: dtFormHeight,
           ),
           TextFormField(
               decoration: const InputDecoration(
@@ -37,7 +37,7 @@ class LoginForm extends StatelessWidget {
                       onPressed: null,
                       icon: Icon(Icons.remove_red_eye_sharp)))),
           const SizedBox(
-            height: myFormHeight - 20,
+            height: dtFormHeight - 20,
           ),
           Align(
             alignment: Alignment.centerRight,

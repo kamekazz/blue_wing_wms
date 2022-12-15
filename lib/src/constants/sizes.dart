@@ -1,9 +1,9 @@
 //App default Sizing
-const myDefaultSize = 30.0;
-const mySplashContainerSize = 30.0;
-const myButtonHeight = 15.0;
-const myFormHeight = 30.0;
+const dtDefaultSize = 30.0;
+const dtSplashContainerSize = 30.0;
+const dtButtonHeight = 15.0;
+const dtFormHeight = 30.0;
 
 //Dashboard
-const myDashboardPadding = 20.0;
-const myDashboardCardPadding = 10.0;
+const dtDashboardPadding = 20.0;
+const dtDashboardCardPadding = 10.0;

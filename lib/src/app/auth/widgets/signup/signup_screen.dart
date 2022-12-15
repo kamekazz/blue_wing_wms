@@ -16,7 +16,7 @@ class SignupScreen extends StatelessWidget {
       child: Scaffold(
         body: SingleChildScrollView(
           child: Container(
-            padding: const EdgeInsets.all(myDefaultSize),
+            padding: const EdgeInsets.all(dtDefaultSize),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -36,7 +36,7 @@ class SignupScreen extends StatelessWidget {
                   children: [
                     const Text('OR'),
                     const SizedBox(
-                      height: myFormHeight - 20,
+                      height: dtFormHeight - 20,
                     ),
                     SizedBox(
                       width: double.infinity,
@@ -49,7 +49,7 @@ class SignupScreen extends StatelessWidget {
                           label: const Text(ttSignInWithGoogle)),
                     ),
                     const SizedBox(
-                      height: myFormHeight - 20,
+                      height: dtFormHeight - 20,
                     ),
                     TextButton(
                         onPressed: () {

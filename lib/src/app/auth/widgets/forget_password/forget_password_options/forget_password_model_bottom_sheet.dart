@@ -11,7 +11,7 @@ class ForgetPasswordScreen {
       context: context,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
       builder: (context) => Container(
-        padding: const EdgeInsets.all(myDefaultSize),
+        padding: const EdgeInsets.all(dtDefaultSize),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

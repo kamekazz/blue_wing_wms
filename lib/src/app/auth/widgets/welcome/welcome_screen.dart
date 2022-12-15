@@ -42,7 +42,7 @@ class WelcomeScreen extends StatelessWidget {
                 rightBefore: 0,
               ),
               child: Container(
-                padding: const EdgeInsets.all(myDefaultSize),
+                padding: const EdgeInsets.all(dtDefaultSize),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [

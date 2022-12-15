@@ -13,7 +13,7 @@ class MyElevatedButtonTheme {
       foregroundColor: myWhiteColor,
       backgroundColor: mySecondaryColor,
       side: const BorderSide(color: mySecondaryColor),
-      padding: const EdgeInsets.symmetric(vertical: myButtonHeight),
+      padding: const EdgeInsets.symmetric(vertical: dtButtonHeight),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5.0)),
     ),
   );
@@ -25,7 +25,7 @@ class MyElevatedButtonTheme {
       backgroundColor: myWhiteColor,
       foregroundColor: mySecondaryColor,
       side: const BorderSide(color: myWhiteColor),
-      padding: const EdgeInsets.symmetric(vertical: myButtonHeight),
+      padding: const EdgeInsets.symmetric(vertical: dtButtonHeight),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5.0)),
     ),
   );

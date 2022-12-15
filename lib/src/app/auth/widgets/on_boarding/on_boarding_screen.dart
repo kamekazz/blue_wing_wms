@@ -82,7 +82,7 @@ class LiquidPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return Container(
-      padding: const EdgeInsets.all(myDefaultSize),
+      padding: const EdgeInsets.all(dtDefaultSize),
       color: model.bgColor,
       child:
           Column(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [

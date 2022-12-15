@@ -18,10 +18,10 @@ class ForgetPasswordMailScreen extends StatelessWidget {
       child: Scaffold(
         body: SingleChildScrollView(
           child: Container(
-            padding: const EdgeInsets.all(myDefaultSize),
+            padding: const EdgeInsets.all(dtDefaultSize),
             child: Column(
               children: [
-                const SizedBox(height: myDefaultSize * 4),
+                const SizedBox(height: dtDefaultSize * 4),
                 const LoginHeaderWidget(
                   image: myForgetPasswordImage,
                   title: ttForgetPassword,
@@ -30,7 +30,7 @@ class ForgetPasswordMailScreen extends StatelessWidget {
                   heightBetween: 30.0,
                   textAlign: TextAlign.center,
                 ),
-                const SizedBox(height: myFormHeight),
+                const SizedBox(height: dtFormHeight),
                 Form(
                   child: Column(
                     children: [

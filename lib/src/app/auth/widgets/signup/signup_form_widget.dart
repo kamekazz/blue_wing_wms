@@ -10,7 +10,7 @@ class SignUpFormWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(vertical: myFormHeight),
+      padding: const EdgeInsets.symmetric(vertical: dtFormHeight),
       child: Form(
           child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -21,7 +21,7 @@ class SignUpFormWidget extends StatelessWidget {
                 prefixIcon: Icon(Icons.person_outline_rounded)),
           ),
           const SizedBox(
-            height: myFormHeight - 20,
+            height: dtFormHeight - 20,
           ),
           TextFormField(
             decoration: const InputDecoration(
@@ -29,7 +29,7 @@ class SignUpFormWidget extends StatelessWidget {
                 prefixIcon: Icon(Icons.person_outline_rounded)),
           ),
           const SizedBox(
-            height: myFormHeight - 20,
+            height: dtFormHeight - 20,
           ),
           TextFormField(
             decoration: const InputDecoration(
@@ -37,7 +37,7 @@ class SignUpFormWidget extends StatelessWidget {
                 prefixIcon: Icon(Icons.person_outline_rounded)),
           ),
           const SizedBox(
-            height: myFormHeight - 20,
+            height: dtFormHeight - 20,
           ),
           TextFormField(
             decoration: const InputDecoration(
@@ -45,7 +45,7 @@ class SignUpFormWidget extends StatelessWidget {
                 prefixIcon: Icon(Icons.person_outline_rounded)),
           ),
           const SizedBox(
-            height: myFormHeight - 20,
+            height: dtFormHeight - 20,
           ),
           SizedBox(
             width: double.infinity,
