@@ -9,12 +9,12 @@ class MyTextFormFieldTheme {
           //If you want circular border -- Use this
           // border: OutlineInputBorder(borderRadius: BorderRadius.circular(100)),
           border: OutlineInputBorder(),
-          prefixIconColor: mySecondaryColor,
-          floatingLabelStyle: TextStyle(color: mySecondaryColor),
+          prefixIconColor: ctSecondaryColor,
+          floatingLabelStyle: TextStyle(color: ctSecondaryColor),
           focusedBorder: OutlineInputBorder(
             // for circular focused Border
             //borderRadius: BorderRadius.circular(100),
-            borderSide: BorderSide(width: 2, color: mySecondaryColor),
+            borderSide: BorderSide(width: 2, color: ctSecondaryColor),
           ));
 
   static InputDecorationTheme darkInputDecorationTheme =
@@ -22,11 +22,11 @@ class MyTextFormFieldTheme {
           //If you want circular border -- Use this
           // border: OutlineInputBorder(borderRadius: BorderRadius.circular(100)),
           border: OutlineInputBorder(),
-          prefixIconColor: myPrimaryColor,
-          floatingLabelStyle: TextStyle(color: myPrimaryColor),
+          prefixIconColor: ctPrimaryColor,
+          floatingLabelStyle: TextStyle(color: ctPrimaryColor),
           focusedBorder: OutlineInputBorder(
             // for circular focused Border
             //borderRadius: BorderRadius.circular(100),
-            borderSide: BorderSide(width: 2, color: myPrimaryColor),
+            borderSide: BorderSide(width: 2, color: ctPrimaryColor),
           ));
 }

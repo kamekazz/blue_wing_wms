@@ -25,7 +25,7 @@ class WelcomeScreen extends StatelessWidget {
 
     return SafeArea(
       child: Scaffold(
-        backgroundColor: isDarkMode ? mySecondaryColor : Colors.amber,
+        backgroundColor: isDarkMode ? ctSecondaryColor : Colors.amber,
         body: Stack(
           children: [
             MyFadeAnimation(
@@ -78,7 +78,7 @@ class WelcomeScreen extends StatelessWidget {
                             },
                             style: ElevatedButton.styleFrom(
                               backgroundColor:
-                                  isDarkMode ? Colors.amber : mySecondaryColor,
+                                  isDarkMode ? Colors.amber : ctSecondaryColor,
                             ),
                             child: Text(ttSignup.toUpperCase()),
                           ),

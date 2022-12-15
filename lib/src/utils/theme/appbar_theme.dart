@@ -8,14 +8,14 @@ class MyAppbarTheme {
       elevation: 0,
       centerTitle: true,
       backgroundColor: Colors.transparent,
-      iconTheme: IconThemeData(color: myDarkColor, size: 18.0),
-      actionsIconTheme: IconThemeData(color: myDarkColor, size: 18.0));
+      iconTheme: IconThemeData(color: ctDarkColor, size: 18.0),
+      actionsIconTheme: IconThemeData(color: ctDarkColor, size: 18.0));
 
   static const darkAppBarTheme = AppBarTheme(
     elevation: 0,
     centerTitle: true,
     backgroundColor: Colors.transparent,
-    iconTheme: IconThemeData(color: myWhiteColor, size: 18.0),
-    actionsIconTheme: IconThemeData(color: myWhiteColor, size: 18.0),
+    iconTheme: IconThemeData(color: ctWhiteColor, size: 18.0),
+    actionsIconTheme: IconThemeData(color: ctWhiteColor, size: 18.0),
   );
 }

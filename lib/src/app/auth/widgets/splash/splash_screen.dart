@@ -81,7 +81,7 @@ class SplashScreen extends StatelessWidget {
                 height: dtSplashContainerSize,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(100),
-                    color: myPrimaryColor),
+                    color: ctPrimaryColor),
               )),
           MyFadeAnimation(
               durationInMs: 1600,

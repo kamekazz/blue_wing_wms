@@ -39,7 +39,7 @@ class OnBoardingScreen extends StatelessWidget {
               child: Container(
                   padding: const EdgeInsets.all(20),
                   decoration: const BoxDecoration(
-                      color: myDarkColor, shape: BoxShape.circle),
+                      color: ctDarkColor, shape: BoxShape.circle),
                   child: const Icon(
                     Icons.arrow_forward_ios,
                     color: Colors.white,

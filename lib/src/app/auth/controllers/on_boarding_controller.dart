@@ -40,20 +40,20 @@ class OnboardingController extends GetxController {
             title: ttOnBoardingTitle1,
             subTitle: ttOnBoardingSubTitle1,
             counterText: ttOnBoardingCounter1,
-            bgColor: myOnBoardingPage1Color)),
+            bgColor: ctOnBoardingPage1Color)),
     LiquidPage(
         model: OnBoardingModel(
             image: myOnBoardingImage2,
             title: ttOnBoardingTitle2,
             subTitle: ttOnBoardingSubTitle2,
             counterText: ttOnBoardingCounter2,
-            bgColor: myOnBoardingPage2Color)),
+            bgColor: ctOnBoardingPage2Color)),
     LiquidPage(
         model: OnBoardingModel(
             image: myOnBoardingImage3,
             title: ttOnBoardingTitle3,
             subTitle: ttOnBoardingSubTitle3,
             counterText: ttOnBoardingCounter3,
-            bgColor: myOnBoardingPage3Color)),
+            bgColor: ctOnBoardingPage3Color)),
   ];
 }
