@@ -22,7 +22,7 @@ class SignupScreen extends StatelessWidget {
               children: [
                 /* -- Section 1  [Images] --*/
 
-                const LoginHeaderWidget(
+                const AuthHeaderWidget(
                   image: astWelcomeScreenImage,
                   title: ttSignUpSubTitle,
                   subTitle: ttSignUpSubTitle,

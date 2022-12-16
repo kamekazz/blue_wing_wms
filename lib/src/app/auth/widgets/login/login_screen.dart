@@ -23,7 +23,7 @@ class LoginScreen extends StatelessWidget {
               children: [
                 /* -- Section 1  [Images] --*/
 
-                const LoginHeaderWidget(
+                const AuthHeaderWidget(
                   image: astWelcomeScreenImage,
                   title: ttLoginTitle,
                   subTitle: ttLoginSubTitle,

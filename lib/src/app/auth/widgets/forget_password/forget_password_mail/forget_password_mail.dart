@@ -22,7 +22,7 @@ class ForgetPasswordMailScreen extends StatelessWidget {
             child: Column(
               children: [
                 const SizedBox(height: dtDefaultSize * 4),
-                const LoginHeaderWidget(
+                const AuthHeaderWidget(
                   image: astForgetPasswordImage,
                   title: ttForgetPassword,
                   subTitle: ttForgetPasswordSubTitle,
