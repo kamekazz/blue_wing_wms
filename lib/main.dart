@@ -1,3 +1,4 @@
+import 'package:blue_wing_wms/src/app/auth/widgets/forget_password/forget_password_otp/otp_screen.dart';
 import 'package:blue_wing_wms/src/app/auth/widgets/splash/splash_screen.dart';
 import 'package:blue_wing_wms/src/utils/theme/theme.dart';
 import 'package:flutter/material.dart';
@@ -19,9 +20,12 @@ class MyApp extends StatelessWidget {
       darkTheme: MyAppTheme.darkTheme,
       themeMode: ThemeMode.system,
       debugShowCheckedModeBanner: false,
-      defaultTransition: Transition.rightToLeftWithFade,
-      transitionDuration: const Duration(milliseconds: 500),
-      home: const SplashScreen(),
+
+      // defaultTransition: Transition.rightToLeftWithFade,
+      // transitionDuration: const Duration(milliseconds: 500),
+
+      // home: const SplashScreen(),
+      home: const OTPScreen(),
     );
   }
 }

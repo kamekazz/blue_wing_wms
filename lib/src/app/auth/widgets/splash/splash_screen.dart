@@ -19,6 +19,34 @@ class SplashScreen extends StatelessWidget {
       body: Stack(
         children: [
           MyFadeAnimation(
+              durationInMs: 2000,
+              animatePosition: AnimatePosition(
+                  topBefore: 0,
+                  topAfter: 90,
+                  leftBefore: dtDefaultSize,
+                  leftAfter: 200),
+              child: Container(
+                width: dtSplashContainerSize,
+                height: dtSplashContainerSize,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(100),
+                    color: ctSecondaryColor),
+              )),
+          MyFadeAnimation(
+              durationInMs: 2000,
+              animatePosition: AnimatePosition(
+                  topBefore: 0,
+                  topAfter: 60,
+                  leftBefore: dtDefaultSize,
+                  leftAfter: dtDefaultSize),
+              child: Container(
+                width: dtSplashContainerSize,
+                height: dtSplashContainerSize,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(100),
+                    color: ctSecondaryColor),
+              )),
+          MyFadeAnimation(
               durationInMs: 1600,
               animatePosition: AnimatePosition(
                 topBefore: 0,
@@ -93,6 +121,20 @@ class SplashScreen extends StatelessWidget {
               ),
               child: const Image(
                 image: AssetImage(astSplashTopIcon),
+              )),
+          MyFadeAnimation(
+              durationInMs: 2000,
+              animatePosition: AnimatePosition(
+                  topBefore: 0,
+                  topAfter: 600,
+                  leftBefore: dtDefaultSize,
+                  leftAfter: dtDefaultSize),
+              child: Container(
+                width: dtSplashContainerSize,
+                height: dtSplashContainerSize,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(100),
+                    color: ctSecondaryColor),
               )),
         ],
       ),
