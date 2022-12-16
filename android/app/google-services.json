@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1089819570650",
+    "project_id": "blue-wing-sh",
+    "storage_bucket": "blue-wing-sh.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1089819570650:android:f544471c0beffe521410e3",
+        "android_client_info": {
+          "package_name": "com.example.blue_winged_wms"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1089819570650-uaok2vpsh7b389bsk00n1k073tgpq5tq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD6Txwdl3DY9Jkv9jhO7ybUiKuvFzYVYjQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1089819570650-uaok2vpsh7b389bsk00n1k073tgpq5tq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
