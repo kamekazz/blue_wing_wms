@@ -1,6 +1,4 @@
-import 'package:blue_wing_wms/src/app/auth/widgets/forget_password/forget_password_otp/otp_screen.dart';
-import 'package:blue_wing_wms/src/app/auth/widgets/splash/splash_screen.dart';
-import 'package:blue_wing_wms/src/app/dashboard/widgets/dashboard/dashboard.dart';
+import 'package:blue_wing_wms/src/app/home/widgets/dashboard/dashboard.dart';
 import 'package:blue_wing_wms/src/utils/theme/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
