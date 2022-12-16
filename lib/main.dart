@@ -1,5 +1,6 @@
 import 'package:blue_wing_wms/src/app/auth/widgets/forget_password/forget_password_otp/otp_screen.dart';
 import 'package:blue_wing_wms/src/app/auth/widgets/splash/splash_screen.dart';
+import 'package:blue_wing_wms/src/app/dashboard/widgets/dashboard/dashboard.dart';
 import 'package:blue_wing_wms/src/utils/theme/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
       // transitionDuration: const Duration(milliseconds: 500),
 
       // home: const SplashScreen(),
-      home: const OTPScreen(),
+      home: const DashboardScreen(),
     );
   }
 }

@@ -9,7 +9,7 @@ const ctAccentColor = Color.fromARGB(255, 0, 172, 0);
 
 const ctWhiteColor = Colors.white;
 const ctDarkColor = Color(0xff000000);
-const ctCardBgColor = Color(0xFFF7F5F1);
+const ctCardBgColor = Color.fromARGB(255, 253, 243, 222);
 
 // -- ON-BOARDING COLORS
 const ctOnBoardingPage1Color = Colors.white;
