@@ -1,6 +1,7 @@
 import 'package:blue_wing_wms/src/constants/colors.dart';
 import 'package:blue_wing_wms/src/constants/image_strings.dart';
 import 'package:blue_wing_wms/src/constants/sizes.dart';
+import 'package:blue_wing_wms/src/repository/authentication_repository/authentication_repository.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../constants/text_strings.dart';
@@ -35,7 +36,9 @@ class DashboardScreen extends StatelessWidget {
                 color: ctCardBgColor,
               ),
               child: IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  AuthenticationRepository.instance.logout();
+                },
                 icon: const Image(image: AssetImage(astUserProfileImage)),
               ),
             )
