@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 /* -- LIST OF ALL COLORS -- */
 
 const ctPrimaryColor = Color.fromARGB(255, 255, 204, 0);
-const ctSecondaryColor = Color.fromARGB(255, 0, 102, 204);
+const ctSecondaryColor = Color.fromARGB(255, 83, 157, 219);
 
 const ctAccentColor = Color.fromARGB(255, 0, 172, 0);
 
