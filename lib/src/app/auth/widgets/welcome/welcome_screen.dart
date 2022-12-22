@@ -60,30 +60,34 @@ class WelcomeScreen extends StatelessWidget {
                             textAlign: TextAlign.center),
                       ],
                     ),
-                    Row(
-                      children: [
-                        Expanded(
-                          child: OutlinedButton(
-                            onPressed: () {
-                              Get.to(() => const LoginScreen());
-                            },
-                            child: Text(ttLogin.toUpperCase()),
-                          ),
-                        ),
-                        const SizedBox(width: 10.0),
-                        Expanded(
-                          child: ElevatedButton(
-                            onPressed: () {
-                              Get.to(() => const SignupScreen());
-                            },
-                            style: ElevatedButton.styleFrom(
-                              backgroundColor:
-                                  isDarkMode ? Colors.amber : ctSecondaryColor,
+                    Container(
+                      constraints: BoxConstraints(maxWidth: 300),
+                      child: Row(
+                        children: [
+                          Expanded(
+                            child: OutlinedButton(
+                              onPressed: () {
+                                Get.to(() => const LoginScreen());
+                              },
+                              child: Text(ttLogin.toUpperCase()),
                             ),
-                            child: Text(ttSignup.toUpperCase()),
                           ),
-                        ),
-                      ],
+                          const SizedBox(width: 10.0),
+                          Expanded(
+                            child: ElevatedButton(
+                              onPressed: () {
+                                Get.to(() => const SignupScreen());
+                              },
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: isDarkMode
+                                    ? Colors.amber
+                                    : ctSecondaryColor,
+                              ),
+                              child: Text(ttSignup.toUpperCase()),
+                            ),
+                          ),
+                        ],
+                      ),
                     )
                   ],
                 ),
