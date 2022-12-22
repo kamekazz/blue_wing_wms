@@ -1,6 +1,6 @@
 //NOT INCLUDED
 import 'package:blue_wing_wms/src/app/auth/widgets/welcome/welcome_screen.dart';
-import 'package:blue_wing_wms/src/app/home/widgets/dashboard/dashboard.dart';
+import 'package:blue_wing_wms/src/app/home/views/dashboard/dashboard.dart';
 import 'package:blue_wing_wms/src/repository/authentication_repository/authentication_exceptions.dart';
 import 'package:blue_wing_wms/src/utils/helper/print_log.dart';
 import 'package:firebase_auth/firebase_auth.dart';
