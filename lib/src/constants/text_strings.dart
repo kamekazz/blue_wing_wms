@@ -33,13 +33,12 @@ const String ttOnBoardingCounter2 = "2/3";
 const String ttOnBoardingCounter3 = "3/3";
 
 // -- Welcome Screen Text
-const String ttWelcomeTitle = "Build Awesome Apps";
-const String ttWelcomeSubTitle =
-    "Let's put your creativity on the development highway.";
+const String ttWelcomeTitle = "Build Awesome Logistic Tools";
+const String ttWelcomeSubTitle = "let's build easy-to-use applications";
 
 // -- Login Screen Text
 const String ttLoginTitle = "Welcome Back,";
-const String ttLoginSubTitle = "Make it work, make it right, make it fast.";
+const String ttLoginSubTitle = "Make it work, make it right.";
 const String ttRememberMe = "Remember Me?";
 const String ttDontHaveAnAccount = "Don't have an Account? ";
 

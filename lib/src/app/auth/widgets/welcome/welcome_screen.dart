@@ -1,5 +1,4 @@
 import 'package:blue_wing_wms/src/app/auth/widgets/login/login_screen.dart';
-import 'package:blue_wing_wms/src/app/auth/widgets/signup/signup_screen.dart';
 import 'package:blue_wing_wms/src/constants/colors.dart';
 import 'package:blue_wing_wms/src/constants/image_strings.dart';
 import 'package:blue_wing_wms/src/constants/sizes.dart';

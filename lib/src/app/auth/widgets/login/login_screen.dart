@@ -19,12 +19,13 @@ class LoginScreen extends StatelessWidget {
             child: Container(
               padding: const EdgeInsets.all(dtDefaultSize),
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   const AuthHeaderWidget(
                     image: astWelcomeScreenImage,
                     title: ttLoginTitle,
                     subTitle: ttLoginSubTitle,
+                    crossAxisAlignment: CrossAxisAlignment.center,
                   ),
                   Container(
                       constraints: const BoxConstraints(maxWidth: 400),
