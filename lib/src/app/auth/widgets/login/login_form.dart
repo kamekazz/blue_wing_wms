@@ -65,7 +65,7 @@ class LoginForm extends StatelessWidget {
                           controller.password.text.trim());
                     }
                   },
-                  child: Text(ttLogin.toLowerCase()),
+                  child: Text(ttLogin.toUpperCase()),
                 ),
               )
             ],

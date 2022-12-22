@@ -64,26 +64,26 @@ class WelcomeScreen extends StatelessWidget {
                       constraints: const BoxConstraints(maxWidth: 300),
                       child: Row(
                         children: [
-                          Expanded(
-                            child: OutlinedButton(
-                              onPressed: () {
-                                Get.to(() => const LoginScreen());
-                              },
-                              child: Text(ttLogin.toUpperCase()),
-                            ),
-                          ),
-                          const SizedBox(width: 10.0),
+                          // Expanded(
+                          //   child: OutlinedButton(
+                          //     onPressed: () {
+                          //       Get.to(() => const LoginScreen());
+                          //     },
+                          //     child: Text(ttLogin.toUpperCase()),
+                          //   ),
+                          // ),
+                          // const SizedBox(width: 10.0),
                           Expanded(
                             child: ElevatedButton(
                               onPressed: () {
-                                Get.to(() => const SignupScreen());
+                                Get.to(() => const LoginScreen());
                               },
                               style: ElevatedButton.styleFrom(
                                 backgroundColor: isDarkMode
                                     ? Colors.amber
                                     : ctSecondaryColor,
                               ),
-                              child: Text(ttSignup.toUpperCase()),
+                              child: Text(ttLogin.toUpperCase()),
                             ),
                           ),
                         ],
