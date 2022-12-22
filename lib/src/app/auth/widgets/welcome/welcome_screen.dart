@@ -61,7 +61,7 @@ class WelcomeScreen extends StatelessWidget {
                       ],
                     ),
                     Container(
-                      constraints: BoxConstraints(maxWidth: 300),
+                      constraints: const BoxConstraints(maxWidth: 300),
                       child: Row(
                         children: [
                           Expanded(

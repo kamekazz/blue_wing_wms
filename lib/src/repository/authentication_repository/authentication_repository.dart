@@ -4,7 +4,6 @@ import 'package:blue_wing_wms/src/app/home/widgets/dashboard/dashboard.dart';
 import 'package:blue_wing_wms/src/repository/authentication_repository/authentication_exceptions.dart';
 import 'package:blue_wing_wms/src/utils/helper/print_log.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:get/get.dart';
 
 class AuthenticationRepository extends GetxController {
