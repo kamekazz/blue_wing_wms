@@ -1,3 +1,4 @@
+import 'package:blue_wing_wms/src/app/home/views/dashboard/widgets/options.dart';
 import 'package:blue_wing_wms/src/constants/colors.dart';
 import 'package:blue_wing_wms/src/constants/image_strings.dart';
 import 'package:blue_wing_wms/src/constants/sizes.dart';
@@ -5,10 +6,6 @@ import 'package:blue_wing_wms/src/repository/authentication_repository/authentic
 import 'package:flutter/material.dart';
 
 import '../../../../constants/text_strings.dart';
-import 'widgets/banners.dart';
-import 'widgets/categories.dart';
-import 'widgets/search.dart';
-import 'widgets/top_courses.dart';
 
 class DashboardScreen extends StatelessWidget {
   const DashboardScreen({Key? key}) : super(key: key);
@@ -48,46 +45,13 @@ class DashboardScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              //Heading
-              Padding(
-                padding: const EdgeInsets.only(left: 10),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(ttDashboardTitle, style: txtTheme.bodyText2),
-                    Text(ttDashboardHeading, style: txtTheme.headline2),
-                    const SizedBox(height: dtDashboardPadding),
-                  ],
-                ),
-              ),
-
-              // Search Box
-              Container(
-                  padding: const EdgeInsets.symmetric(
-                      horizontal: dtDashboardPadding),
-                  child: DashboardSearchBox(txtTheme: txtTheme)),
-              const SizedBox(height: dtDashboardPadding),
-
-              // Categories
-              DashboardCategories(txtTheme: txtTheme),
-              const SizedBox(height: dtDashboardPadding),
-
-              //Banners
-              Container(
-                  padding: const EdgeInsets.symmetric(
-                      horizontal: dtDashboardPadding),
-                  child: DashboardBanners(txtTheme: txtTheme, isDark: isDark)),
-              const SizedBox(height: dtDashboardPadding),
-
-              //Top Course
-
               Container(
                 padding:
                     const EdgeInsets.symmetric(horizontal: dtDashboardPadding),
-                child: Text(ttDashboardTopCourses,
+                child: Text(ttDashboardOptions,
                     style: txtTheme.headline4?.apply(fontSizeFactor: 1.2)),
               ),
-              DashboardTopCourses(txtTheme: txtTheme, isDark: isDark)
+              DashboardOptions(),
             ],
           ),
         ),

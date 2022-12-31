@@ -1,4 +1,5 @@
 import 'package:blue_wing_wms/firebase_options.dart';
+import 'package:blue_wing_wms/src/app/home/views/dashboard/dashboard.dart';
 import 'package:blue_wing_wms/src/repository/authentication_repository/authentication_repository.dart';
 import 'package:blue_wing_wms/src/utils/theme/theme.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -25,10 +26,11 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.system,
       debugShowCheckedModeBanner: false,
 
-      // defaultTransition: Transition.rightToLeftWithFade,
-      // transitionDuration: const Duration(milliseconds: 500),
+      defaultTransition: Transition.rightToLeftWithFade,
+      transitionDuration: const Duration(milliseconds: 500),
 
       home: const CircularProgressIndicator(),
+      // home: DashboardScreen(),
     );
   }
 }

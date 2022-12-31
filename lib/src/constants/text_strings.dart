@@ -73,7 +73,7 @@ const String ttDashboardHeading = "Explore Courses";
 const String ttDashboardSearch = "Search...";
 const String ttDashboardBannerTitle2 = "JAVA";
 const String ttDashboardButton = "View All";
-const String ttDashboardTopCourses = "Top Courses";
+const String ttDashboardOptions = "Options";
 const String ttDashboardBannerSubTitle = "10 Lessons";
 const String ttDashboardBannerTitle1 = "Android for Beginners";
 
