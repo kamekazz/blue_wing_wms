@@ -1,6 +1,6 @@
 //NOT INCLUDED
 import 'package:blue_wing_wms/src/app/auth/widgets/welcome/welcome_screen.dart';
-import 'package:blue_wing_wms/src/app/home/views/dashboard/dashboard.dart';
+import 'package:blue_wing_wms/src/app/home/views/dashboard.dart';
 import 'package:blue_wing_wms/src/repository/authentication_repository/authentication_exceptions.dart';
 import 'package:blue_wing_wms/src/utils/helper/print_log.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -22,7 +22,7 @@ class AuthenticationRepository extends GetxController {
   _setInitialScreen(User? user) {
     user == null
         ? Get.offAll(() => const WelcomeScreen())
-        : Get.offAll(() => const DashboardScreen());
+        : Get.offAll(() => DashboardScreen());
   }
 
   Future<void> createUserWithEmailAndPassword(
@@ -31,7 +31,7 @@ class AuthenticationRepository extends GetxController {
       await _auth.createUserWithEmailAndPassword(
           email: email, password: password);
       firebaseUser.value != null
-          ? Get.offAll(() => const DashboardScreen())
+          ? Get.offAll(() => DashboardScreen())
           : Get.offAll(() => const WelcomeScreen());
     } on FirebaseAuthException catch (e) {
       final ex = SignupWithEmailFailure.code(e.code);

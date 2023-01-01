@@ -7,14 +7,14 @@ class MyAppbarTheme {
   static const lightAppBarTheme = AppBarTheme(
       elevation: 0,
       centerTitle: true,
-      backgroundColor: Colors.transparent,
+      backgroundColor: ctSecondaryColor,
       iconTheme: IconThemeData(color: ctDarkColor, size: 18.0),
       actionsIconTheme: IconThemeData(color: ctDarkColor, size: 18.0));
 
   static const darkAppBarTheme = AppBarTheme(
     elevation: 0,
     centerTitle: true,
-    backgroundColor: Colors.transparent,
+    backgroundColor: ctSecondaryColor,
     iconTheme: IconThemeData(color: ctWhiteColor, size: 18.0),
     actionsIconTheme: IconThemeData(color: ctWhiteColor, size: 18.0),
   );

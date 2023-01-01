@@ -1,5 +1,5 @@
 import 'package:blue_wing_wms/firebase_options.dart';
-import 'package:blue_wing_wms/src/app/home/views/dashboard/dashboard.dart';
+
 import 'package:blue_wing_wms/src/repository/authentication_repository/authentication_repository.dart';
 import 'package:blue_wing_wms/src/utils/theme/theme.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
       title: 'Blue Winged',
       theme: MyAppTheme.lightTheme,
       darkTheme: MyAppTheme.darkTheme,
-      themeMode: ThemeMode.system,
+      themeMode: ThemeMode.light,
       debugShowCheckedModeBanner: false,
 
       defaultTransition: Transition.rightToLeftWithFade,
