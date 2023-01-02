@@ -8,6 +8,7 @@ import 'package:blue_wing_wms/src/constants/text_strings.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatelessWidget {
+  static const String routeName = '/LoginScreen';
   const LoginScreen({super.key});
 
   @override

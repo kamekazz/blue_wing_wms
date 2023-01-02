@@ -10,6 +10,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class WelcomeScreen extends StatelessWidget {
+  static const String routeName = '/WelcomeScreen';
   const WelcomeScreen({super.key});
 
   @override
@@ -75,7 +76,8 @@ class WelcomeScreen extends StatelessWidget {
                           Expanded(
                             child: ElevatedButton(
                               onPressed: () {
-                                Get.to(() => const LoginScreen());
+                                Navigator.pushNamed(
+                                    context, LoginScreen.routeName);
                               },
                               style: ElevatedButton.styleFrom(
                                 backgroundColor: isDarkMode

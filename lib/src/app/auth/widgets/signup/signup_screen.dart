@@ -5,9 +5,9 @@ import 'package:blue_wing_wms/src/constants/image_strings.dart';
 import 'package:blue_wing_wms/src/constants/sizes.dart';
 import 'package:blue_wing_wms/src/constants/text_strings.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 class SignupScreen extends StatelessWidget {
+  static const String routeName = '/SignupScreen';
   const SignupScreen({super.key});
 
   @override
@@ -53,7 +53,7 @@ class SignupScreen extends StatelessWidget {
                     ),
                     TextButton(
                         onPressed: () {
-                          Get.to(() => const LoginScreen());
+                          Navigator.pushNamed(context, LoginScreen.routeName);
                         },
                         child: Text.rich(TextSpan(
                             text: ttAlreadyHaveAnAccount,

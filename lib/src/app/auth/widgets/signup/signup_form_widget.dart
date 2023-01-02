@@ -1,19 +1,35 @@
-import 'package:blue_wing_wms/src/app/auth/controllers/signup_controller.dart';
+// ignore_for_file: no_leading_underscores_for_local_identifiers
+
 import 'package:blue_wing_wms/src/constants/sizes.dart';
 import 'package:blue_wing_wms/src/constants/text_strings.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
-class SignUpFormWidget extends StatelessWidget {
+class SignUpFormWidget extends StatefulWidget {
   const SignUpFormWidget({
     Key? key,
   }) : super(key: key);
 
   @override
+  State<SignUpFormWidget> createState() => _SignUpFormWidgetState();
+}
+
+class _SignUpFormWidgetState extends State<SignUpFormWidget> {
+  final _formKey = GlobalKey<FormState>();
+  final TextEditingController _fullNameController = TextEditingController();
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
+
+  @override
+  void dispose() {
+    super.dispose();
+    _fullNameController.dispose();
+    _emailController.dispose();
+    _passwordController.dispose();
+  }
+
+  void signUp() {}
+  @override
   Widget build(BuildContext context) {
-    final controller = Get.put(SignUpController());
-    // ignore: no_leading_underscores_for_local_identifiers
-    final _formKey = GlobalKey<FormState>();
     return Container(
       padding: const EdgeInsets.symmetric(vertical: dtFormHeight),
       child: Form(
@@ -22,7 +38,7 @@ class SignUpFormWidget extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               TextFormField(
-                controller: controller.fullName,
+                controller: _fullNameController,
                 decoration: const InputDecoration(
                     label: Text(ttFullName),
                     prefixIcon: Icon(Icons.person_outline_rounded)),
@@ -31,7 +47,7 @@ class SignUpFormWidget extends StatelessWidget {
                 height: dtFormHeight - 20,
               ),
               TextFormField(
-                controller: controller.email,
+                controller: _emailController,
                 decoration: const InputDecoration(
                     label: Text(ttEmail),
                     prefixIcon: Icon(Icons.email_outlined)),
@@ -40,15 +56,7 @@ class SignUpFormWidget extends StatelessWidget {
                 height: dtFormHeight - 20,
               ),
               TextFormField(
-                controller: controller.phoneNo,
-                decoration: const InputDecoration(
-                    label: Text(ttPhoneNo), prefixIcon: Icon(Icons.numbers)),
-              ),
-              const SizedBox(
-                height: dtFormHeight - 20,
-              ),
-              TextFormField(
-                controller: controller.password,
+                controller: _passwordController,
                 decoration: const InputDecoration(
                     label: Text(ttPassword),
                     prefixIcon: Icon(Icons.fingerprint)),
@@ -61,9 +69,7 @@ class SignUpFormWidget extends StatelessWidget {
                 child: ElevatedButton(
                     onPressed: () {
                       if (_formKey.currentState!.validate()) {
-                        SignUpController.instance.registerUser(
-                            controller.email.text.trim(),
-                            controller.password.text.trim());
+                        signUp();
                       }
                     },
                     child: Text(ttSignup.toUpperCase())),
