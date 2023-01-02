@@ -41,7 +41,8 @@ class _LoginFormState extends State<LoginForm> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               TextFormField(
-                  validator: (value) {},
+                  keyboardType: TextInputType.emailAddress,
+                  // validator: (value) {},
                   controller: _emailController,
                   decoration: const InputDecoration(
                       prefixIcon: Icon(Icons.person_outline_outlined),
@@ -52,7 +53,8 @@ class _LoginFormState extends State<LoginForm> {
                 height: dtFormHeight,
               ),
               TextFormField(
-                  validator: (value) {},
+                  obscureText: true,
+                  // validator: (value) {},
                   controller: _passwordController,
                   decoration: const InputDecoration(
                       prefixIcon: Icon(Icons.fingerprint),

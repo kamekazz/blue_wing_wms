@@ -32,7 +32,7 @@ class OpionsIteam extends StatelessWidget {
         padding: const EdgeInsets.all(20),
         child: Center(
             child: Column(
-          children: [
+          children: const [
             Icon(Icons.play_arrow),
             Text('Option'),
           ],

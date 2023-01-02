@@ -13,14 +13,17 @@ dependencies:
   cupertino_icons: ^1.0.2
   firebase_auth: ^4.2.1
   firebase_core: ^2.4.0
+  firebase_storage: ^11.0.10
   flutter:
     sdk: flutter
   flutter_native_splash: ^2.2.16
   flutter_otp_text_field: ^1.1.1
   get: ^4.6.5
   google_fonts: ^3.0.1
+  image_picker: ^0.8.6
   liquid_swipe: ^3.0.0
   smooth_page_indicator: ^1.0.0+2
+  uuid: ^3.0.7
 
 dev_dependencies:
   flutter_lints: ^2.0.0
