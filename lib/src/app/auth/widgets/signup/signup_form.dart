@@ -38,7 +38,7 @@ class _SignUpFormWidgetState extends State<SignUpFormWidget> {
   }
 
   selectImage() async {
-    Uint8List im = await imagePicker(ImageSource.gallery);
+    Uint8List im = await pickImage(ImageSource.gallery);
     setState(() {
       _image = im;
     });

@@ -1,3 +1,4 @@
+import 'package:blue_wing_wms/src/app/auth/models/user_model.dart' as model;
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'dart:typed_data';
@@ -31,15 +32,18 @@ class AuthMethods {
         String photoUrl = await StorageMethods()
             .uploadImageToStorage('profilePics', file, false);
 
-        await _firestore.collection('users').doc(cred.user!.uid).set({
-          'username': username,
-          'uid': cred.user!.uid,
-          'email': email,
-          'bio': bio,
-          'photoUrl': photoUrl,
-          'followers': [],
-          'following': [],
-        });
+        model.User user = model.User(
+            email: email,
+            uid: cred.user!.uid,
+            photoUrl: photoUrl,
+            username: username,
+            followers: [],
+            following: []);
+
+        await _firestore
+            .collection('users')
+            .doc(cred.user!.uid)
+            .set(user.toJson());
         res = 'success';
       }
     } catch (err) {
