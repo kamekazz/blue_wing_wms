@@ -1,6 +1,7 @@
 // ignore_for_file: no_leading_underscores_for_local_identifiers
 
 import 'package:blue_wing_wms/src/app/auth/controllers/auth_methods.dart';
+import 'package:blue_wing_wms/src/app/home/views/dashboard.dart';
 import 'package:blue_wing_wms/src/constants/sizes.dart';
 import 'package:blue_wing_wms/src/constants/text_strings.dart';
 import 'package:blue_wing_wms/src/utils/helper/image_pick.dart';
@@ -61,15 +62,12 @@ class _SignUpFormWidgetState extends State<SignUpFormWidget> {
       setState(() {
         _isLoading = false;
       });
-      // navigate to the home screen
-      // Navigator.of(context).pushReplacement(
-      //   MaterialPageRoute(
-      //     builder: (context) => const ResponsiveLayout(
-      //       mobileScreenLayout: MobileScreenLayout(),
-      //       webScreenLayout: WebScreenLayout(),
-      //     ),
-      //   ),
-      // );
+      // ignore: use_build_context_synchronously
+      Navigator.of(context).pushReplacement(
+        MaterialPageRoute(
+          builder: (context) => const DashboardScreen(),
+        ),
+      );
     } else {
       setState(() {
         _isLoading = false;
@@ -99,7 +97,8 @@ class _SignUpFormWidgetState extends State<SignUpFormWidget> {
                       : const CircleAvatar(
                           radius: 64,
                           backgroundImage: NetworkImage(
-                              'https://i.stack.imgur.com/l60Hf.png'),
+                              'https://i.stack.imgur.com/l60Hf.png',
+                              scale: 1),
                           backgroundColor: Colors.red,
                         ),
                   Positioned(

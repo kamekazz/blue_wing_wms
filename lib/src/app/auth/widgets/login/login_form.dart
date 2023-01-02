@@ -2,10 +2,14 @@
 
 import 'package:blue_wing_wms/src/app/auth/widgets/forget_password/forget_password_options/forget_password_model_bottom_sheet.dart';
 import 'package:blue_wing_wms/src/app/auth/widgets/signup/signup_screen.dart';
+import 'package:blue_wing_wms/src/app/home/views/dashboard.dart';
 import 'package:flutter/material.dart';
 
 import 'package:blue_wing_wms/src/constants/sizes.dart';
 import 'package:blue_wing_wms/src/constants/text_strings.dart';
+
+import '../../../../utils/helper/showSnackbar.dart';
+import '../../controllers/auth_methods.dart';
 
 class LoginForm extends StatefulWidget {
   const LoginForm({
@@ -21,6 +25,7 @@ class _LoginFormState extends State<LoginForm> {
   // final AuthService authService = AuthService();
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
+  bool _isLoading = false;
 
   @override
   void dispose() {
@@ -29,7 +34,31 @@ class _LoginFormState extends State<LoginForm> {
     _passwordController.dispose();
   }
 
-  void signInUser() {}
+  void handelSignInUser() async {
+    setState(() {
+      _isLoading = true;
+    });
+    String res = await AuthMethods().loginUser(
+        email: _emailController.text, password: _passwordController.text);
+    if (res == 'success') {
+      // ignore: use_build_context_synchronously
+      Navigator.of(context).pushAndRemoveUntil(
+          MaterialPageRoute(
+            builder: (context) => const DashboardScreen(),
+          ),
+          (route) => false);
+
+      setState(() {
+        _isLoading = false;
+      });
+    } else {
+      setState(() {
+        _isLoading = false;
+      });
+      // ignore: use_build_context_synchronously
+      showSnackBar(context, res);
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -81,10 +110,14 @@ class _LoginFormState extends State<LoginForm> {
                 child: ElevatedButton(
                   onPressed: () {
                     if (_signInFormKey.currentState!.validate()) {
-                      signInUser();
+                      if (_isLoading == false) {
+                        handelSignInUser();
+                      }
                     }
                   },
-                  child: Text(ttLogin.toUpperCase()),
+                  child: _isLoading
+                      ? const Text("is loading")
+                      : Text(ttLogin.toUpperCase()),
                 ),
               ),
               Align(

@@ -1,3 +1,4 @@
+import 'package:blue_wing_wms/src/app/home/views/dashboard.dart';
 import 'package:flutter/material.dart';
 
 import '../../app/auth/widgets/login/login_screen.dart';
@@ -12,6 +13,8 @@ Route<dynamic> generateRoute(RouteSettings routeSettings) {
       return MaterialPageRoute(builder: (_) => const LoginScreen());
     case SignupScreen.routeName:
       return MaterialPageRoute(builder: (_) => const SignupScreen());
+    case DashboardScreen.routeName:
+      return MaterialPageRoute(builder: (_) => const DashboardScreen());
     default:
       return MaterialPageRoute(builder: (_) => const WelcomeScreen());
   }

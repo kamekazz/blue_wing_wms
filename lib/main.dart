@@ -1,5 +1,7 @@
 // import 'package:get/get.dart';
 import 'package:blue_wing_wms/firebase_options.dart';
+import 'package:blue_wing_wms/src/app/home/views/dashboard.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 // import 'package:blue_wing_wms/src/repository/authentication_repository/authentication_repository.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:blue_wing_wms/src/app/auth/widgets/welcome/welcome_screen.dart';
@@ -25,7 +27,27 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.light,
       debugShowCheckedModeBanner: false,
       onGenerateRoute: (settings) => generateRoute(settings),
-      home: const WelcomeScreen(),
+      home: StreamBuilder(
+        stream: FirebaseAuth.instance.authStateChanges(),
+        builder: (context, snapshot) {
+          if (snapshot.connectionState == ConnectionState.active) {
+            if (snapshot.hasData) {
+              return const DashboardScreen();
+            } else if (snapshot.hasError) {
+              return Center(
+                child: Text('${snapshot.error}'),
+              );
+            }
+          }
+          if (snapshot.connectionState == ConnectionState.waiting) {
+            return const Center(
+              child: CircularProgressIndicator(),
+            );
+          }
+
+          return const WelcomeScreen();
+        },
+      ),
       // home: DashboardScreen(),
     );
   }
