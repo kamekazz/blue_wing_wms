@@ -1,4 +1,4 @@
-import 'dart:convert';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 class User {
@@ -24,6 +24,23 @@ class User {
     this.isActive = true,
     this.isAdmin = false,
   });
+
+  static User fromSnap(DocumentSnapshot snap) {
+    var snapshot = snap.data() as Map<String, dynamic>;
+
+    return User(
+      email: snapshot["email"],
+      uid: snapshot["uid"],
+      photoUrl: snapshot["photoUrl"],
+      username: snapshot["username"],
+      followers: snapshot["followers"],
+      following: snapshot["following"],
+      status: snapshot["status"],
+      equipment: snapshot["equipment"],
+      isActive: snapshot["isActive"],
+      isAdmin: snapshot["isAdmin"],
+    );
+  }
 
   Map<String, dynamic> toJson() {
     return <String, dynamic>{

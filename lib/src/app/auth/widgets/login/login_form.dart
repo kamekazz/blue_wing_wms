@@ -2,13 +2,14 @@
 
 import 'package:blue_wing_wms/src/app/auth/widgets/forget_password/forget_password_options/forget_password_model_bottom_sheet.dart';
 import 'package:blue_wing_wms/src/app/auth/widgets/signup/signup_screen.dart';
-import 'package:blue_wing_wms/src/app/home/views/dashboard.dart';
+
 import 'package:flutter/material.dart';
 
 import 'package:blue_wing_wms/src/constants/sizes.dart';
 import 'package:blue_wing_wms/src/constants/text_strings.dart';
 
 import '../../../../utils/helper/showSnackbar.dart';
+import '../../../options/views/option_screen.dart';
 import '../../controllers/auth_methods.dart';
 
 class LoginForm extends StatefulWidget {
@@ -44,7 +45,7 @@ class _LoginFormState extends State<LoginForm> {
       // ignore: use_build_context_synchronously
       Navigator.of(context).pushAndRemoveUntil(
           MaterialPageRoute(
-            builder: (context) => const DashboardScreen(),
+            builder: (context) => const OptionScreen(),
           ),
           (route) => false);
 

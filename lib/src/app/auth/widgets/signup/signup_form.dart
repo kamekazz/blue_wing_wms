@@ -1,7 +1,7 @@
 // ignore_for_file: no_leading_underscores_for_local_identifiers
 
 import 'package:blue_wing_wms/src/app/auth/controllers/auth_methods.dart';
-import 'package:blue_wing_wms/src/app/home/views/dashboard.dart';
+
 import 'package:blue_wing_wms/src/constants/sizes.dart';
 import 'package:blue_wing_wms/src/constants/text_strings.dart';
 import 'package:blue_wing_wms/src/utils/helper/image_pick.dart';
@@ -11,6 +11,7 @@ import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
 import '../../../../utils/helper/showSnackbar.dart';
+import '../../../options/views/option_screen.dart';
 
 class SignUpFormWidget extends StatefulWidget {
   const SignUpFormWidget({
@@ -65,7 +66,7 @@ class _SignUpFormWidgetState extends State<SignUpFormWidget> {
       // ignore: use_build_context_synchronously
       Navigator.of(context).pushReplacement(
         MaterialPageRoute(
-          builder: (context) => const DashboardScreen(),
+          builder: (context) => const OptionScreen(),
         ),
       );
     } else {
