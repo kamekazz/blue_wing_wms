@@ -13,7 +13,7 @@ class _EquipmentDashboardState extends State<EquipmentDashboard> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('let Down Dashboard')),
-      body: const RepleOptions(),
+      body: RepleOptions(),
     );
   }
 }

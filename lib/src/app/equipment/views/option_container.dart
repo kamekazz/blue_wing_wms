@@ -1,3 +1,4 @@
+import 'package:blue_wing_wms/src/app/equipment/controller/equipment_methods.dart';
 import 'package:blue_wing_wms/src/constants/colors.dart';
 import 'package:blue_wing_wms/src/constants/text_strings.dart';
 import 'package:flutter/material.dart';
@@ -7,7 +8,12 @@ import 'package:blue_wing_wms/src/app/auth/models/user_model.dart';
 import 'package:blue_wing_wms/src/app/providers/user_provider.dart';
 
 class RepleOptions extends StatelessWidget {
-  const RepleOptions({super.key});
+  EquipmentMethods _equipmentMethods = EquipmentMethods();
+  RepleOptions({super.key});
+
+  void handelEquipmentChange(String val) {
+    _equipmentMethods.setUserEquipment(val);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -32,19 +38,25 @@ class RepleOptions extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  handelEquipmentChange('cherry_picker');
+                },
                 style:
                     ElevatedButton.styleFrom(backgroundColor: ctPrimaryColor),
-                child: const Text('Cherry Picker '),
+                child: const Text('Cherry Picker'),
               ),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  handelEquipmentChange('reach_truck');
+                },
                 style:
                     ElevatedButton.styleFrom(backgroundColor: ctPrimaryColor),
                 child: const Text('Reach Truck '),
               ),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  handelEquipmentChange('cherry_picker');
+                },
                 style:
                     ElevatedButton.styleFrom(backgroundColor: ctPrimaryColor),
                 child: const Text('Wave Picker '),
