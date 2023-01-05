@@ -1,4 +1,7 @@
+// ignore_for_file: prefer_final_fields
+
 import 'package:blue_wing_wms/src/app/equipment/controller/equipment_methods.dart';
+import 'package:blue_wing_wms/src/app/wave/views/wave_screen.dart';
 import 'package:blue_wing_wms/src/constants/colors.dart';
 import 'package:blue_wing_wms/src/constants/text_strings.dart';
 import 'package:flutter/material.dart';
@@ -56,6 +59,10 @@ class RepleOptions extends StatelessWidget {
               ElevatedButton(
                 onPressed: () {
                   handelEquipmentChange('cherry_picker');
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const WaveScreen()),
+                  );
                 },
                 style:
                     ElevatedButton.styleFrom(backgroundColor: ctPrimaryColor),
