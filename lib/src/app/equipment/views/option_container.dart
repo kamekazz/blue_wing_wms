@@ -33,18 +33,21 @@ class RepleOptions extends StatelessWidget {
             children: [
               ElevatedButton(
                 onPressed: () {},
-                child: Text('Cherry Picker '),
-                style: ElevatedButton.styleFrom(primary: ctPrimaryColor),
+                style:
+                    ElevatedButton.styleFrom(backgroundColor: ctPrimaryColor),
+                child: const Text('Cherry Picker '),
               ),
               ElevatedButton(
                 onPressed: () {},
-                child: Text('Reach Truck '),
-                style: ElevatedButton.styleFrom(primary: ctPrimaryColor),
+                style:
+                    ElevatedButton.styleFrom(backgroundColor: ctPrimaryColor),
+                child: const Text('Reach Truck '),
               ),
               ElevatedButton(
                 onPressed: () {},
-                child: Text('Wave Picker '),
-                style: ElevatedButton.styleFrom(primary: ctPrimaryColor),
+                style:
+                    ElevatedButton.styleFrom(backgroundColor: ctPrimaryColor),
+                child: const Text('Wave Picker '),
               ),
             ],
           ),
@@ -61,15 +64,15 @@ class RepleOptions extends StatelessWidget {
             ],
           ),
           user.isAdmin
-              ? Container(
+              ? SizedBox(
                   width: double.infinity,
                   child: ElevatedButton(
-                      onPressed: () {}, child: Text('Admin Panel')),
+                      onPressed: () {}, child: const Text('Admin Panel')),
                 )
-              : Container(
+              : SizedBox(
                   width: double.infinity,
-                  child:
-                      ElevatedButton(onPressed: () {}, child: Text(ttLogout)),
+                  child: ElevatedButton(
+                      onPressed: () {}, child: const Text(ttLogout)),
                 )
         ],
       ),

@@ -1,11 +1,8 @@
 // ignore_for_file: no_leading_underscores_for_local_identifiers
-
 import 'package:blue_wing_wms/src/app/auth/controllers/auth_methods.dart';
-
 import 'package:blue_wing_wms/src/constants/sizes.dart';
 import 'package:blue_wing_wms/src/constants/text_strings.dart';
 import 'package:blue_wing_wms/src/utils/helper/image_pick.dart';
-import 'package:blue_wing_wms/src/utils/helper/print_log.dart';
 import 'dart:typed_data';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
@@ -74,6 +71,7 @@ class _SignUpFormWidgetState extends State<SignUpFormWidget> {
         _isLoading = false;
       });
       // show the error
+      // ignore: use_build_context_synchronously
       showSnackBar(context, res);
     }
   }

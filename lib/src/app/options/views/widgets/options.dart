@@ -1,10 +1,6 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-
-import 'package:blue_wing_wms/src/app/auth/models/user_model.dart';
-import 'package:blue_wing_wms/src/app/providers/user_provider.dart';
-import 'package:blue_wing_wms/src/app/replenishment/views/reple_dashboard.dart';
+import 'package:blue_wing_wms/src/app/equipment/views/reple_dashboard.dart';
 
 class Options extends StatelessWidget {
   Options({super.key});
@@ -22,8 +18,6 @@ class Options extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    User user = Provider.of<UserProvider>(context).getUser;
-
     return Padding(
       padding: const EdgeInsets.all(12),
       child: GridView.builder(
@@ -46,7 +40,7 @@ class Options extends StatelessWidget {
 class OpionsIteam extends StatelessWidget {
   final String title;
 
-  OpionsIteam({
+  const OpionsIteam({
     Key? key,
     required this.title,
   }) : super(key: key);
@@ -57,20 +51,20 @@ class OpionsIteam extends StatelessWidget {
       onTap: () {
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => const RepleDashboard()),
+          MaterialPageRoute(builder: (context) => const EquipmentDashboard()),
         );
       },
       child: Container(
-        padding: EdgeInsets.all(8),
+        padding: const EdgeInsets.all(8),
         decoration: BoxDecoration(
-          color: Color.fromARGB(255, 255, 241, 163),
+          color: const Color.fromARGB(255, 255, 241, 163),
           borderRadius: BorderRadius.circular(10),
         ),
         child: Center(
             child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(Icons.account_tree_outlined),
+            const Icon(Icons.account_tree_outlined),
             Text(title),
           ],
         )),

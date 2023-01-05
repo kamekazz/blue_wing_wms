@@ -2,7 +2,6 @@ import 'package:blue_wing_wms/src/app/auth/models/user_model.dart' as model;
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'dart:typed_data';
-import 'package:flutter/material.dart';
 
 import '../../../resources/storage/storage_method.dart';
 
@@ -32,6 +31,7 @@ class AuthMethods {
           password.isNotEmpty ||
           username.isNotEmpty ||
           bio.isNotEmpty ||
+          // ignore: unnecessary_null_comparison
           file != null) {
         UserCredential cred = await _auth.createUserWithEmailAndPassword(
           email: email,

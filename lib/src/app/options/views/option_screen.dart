@@ -1,3 +1,5 @@
+// ignore_for_file: no_leading_underscores_for_local_identifiers
+
 import 'package:blue_wing_wms/src/app/options/views/widgets/options.dart';
 import 'package:blue_wing_wms/src/app/providers/user_provider.dart';
 
@@ -17,7 +19,6 @@ class _OptionScreenState extends State<OptionScreen> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     getUsername();
   }
