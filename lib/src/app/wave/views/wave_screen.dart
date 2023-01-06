@@ -1,5 +1,6 @@
 import 'package:blue_wing_wms/src/app/wave/views/add_let_down_rec.dart';
 import 'package:blue_wing_wms/src/constants/colors.dart';
+import 'package:blue_wing_wms/src/utils/helper/print_log.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
@@ -68,7 +69,18 @@ class LDToList extends StatefulWidget {
 
 class _LDToListState extends State<LDToList> {
   final Stream<QuerySnapshot> _usersStream =
-      FirebaseFirestore.instance.collection('ttb').snapshots();
+      FirebaseFirestore.instance.collection('let_down_mode').snapshots();
+
+  Color progressStatusColor(String val) {
+    switch (val) {
+      case 'ast':
+        return Colors.amber;
+      case 'completed':
+        return ctAccentColor;
+      default:
+        return Colors.grey;
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -87,14 +99,24 @@ class _LDToListState extends State<LDToList> {
           children: snapshot.data!.docs.map((DocumentSnapshot document) {
             Map<String, dynamic> data =
                 document.data()! as Map<String, dynamic>;
-
+            String preWave = data['pre_wave'].toString();
             return ListTile(
-              onLongPress: () {
-                print('object');
+              onTap: () {
+                printWarning('onTap');
               },
-              tileColor: Colors.red,
-              title: Text(data['title']),
-              subtitle: Text(data['description']),
+              onLongPress: () {
+                printWarning('onLongPress');
+              },
+              tileColor: progressStatusColor(data['status']),
+              title: Text(data['sku']),
+              subtitle: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                      "From: ${data['bulk_location']}     To: ${data['prime_location']}"),
+                  Text("Pre Wave: $preWave"),
+                ],
+              ),
             );
           }).toList(),
         );
