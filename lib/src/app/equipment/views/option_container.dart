@@ -10,6 +10,7 @@ import 'package:provider/provider.dart';
 import 'package:blue_wing_wms/src/app/auth/models/user_model.dart';
 import 'package:blue_wing_wms/src/app/providers/user_provider.dart';
 
+// ignore: must_be_immutable
 class RepleOptions extends StatelessWidget {
   EquipmentMethods _equipmentMethods = EquipmentMethods();
   RepleOptions({super.key});
@@ -58,7 +59,7 @@ class RepleOptions extends StatelessWidget {
               ),
               ElevatedButton(
                 onPressed: () {
-                  handelEquipmentChange('cherry_picker');
+                  handelEquipmentChange('wave_picker');
                   Navigator.push(
                     context,
                     MaterialPageRoute(builder: (context) => const WaveScreen()),
