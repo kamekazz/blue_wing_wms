@@ -100,6 +100,7 @@ class _LDToListState extends State<LDToList> {
             Map<String, dynamic> data =
                 document.data()! as Map<String, dynamic>;
             String preWave = data['pre_wave'].toString();
+            var itemData = data;
             return ListTile(
               onTap: () {
                 printWarning('onTap');
