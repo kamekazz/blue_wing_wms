@@ -1,8 +1,13 @@
+import 'package:blue_wing_wms/src/app/wave/controller/wave_methods.dart';
 import 'package:blue_wing_wms/src/app/wave/views/add_let_down_rec.dart';
 import 'package:blue_wing_wms/src/constants/colors.dart';
 import 'package:blue_wing_wms/src/utils/helper/print_log.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+import '../../auth/models/user_model.dart';
+import '../../providers/user_provider.dart';
 
 class WaveScreen extends StatelessWidget {
   const WaveScreen({super.key});
@@ -68,6 +73,7 @@ class LDToList extends StatefulWidget {
 }
 
 class _LDToListState extends State<LDToList> {
+  WaveMethods _waveMethods = WaveMethods();
   final Stream<QuerySnapshot> _usersStream =
       FirebaseFirestore.instance.collection('let_down_mode').snapshots();
 
@@ -84,6 +90,8 @@ class _LDToListState extends State<LDToList> {
 
   @override
   Widget build(BuildContext context) {
+    User user = Provider.of<UserProvider>(context).getUser;
+
     return StreamBuilder<QuerySnapshot>(
       stream: _usersStream,
       builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
@@ -107,6 +115,7 @@ class _LDToListState extends State<LDToList> {
               },
               onLongPress: () {
                 printWarning('onLongPress');
+                _waveMethods.astLDR(user.username, user.uid, document.id);
               },
               tileColor: progressStatusColor(data['status']),
               title: Text(data['sku']),
