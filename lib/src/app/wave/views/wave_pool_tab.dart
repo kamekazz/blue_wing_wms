@@ -45,11 +45,11 @@ class _WavePoolState extends State<WavePool> {
       stream: _ltrStream,
       builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
         if (snapshot.hasError) {
-          return Text('Something went wrong');
+          return const Text('Something went wrong');
         }
 
         if (snapshot.connectionState == ConnectionState.waiting) {
-          return Text("Loading");
+          return const Text("Loading");
         }
 
         return ListView(
@@ -57,7 +57,6 @@ class _WavePoolState extends State<WavePool> {
             Map<String, dynamic> data =
                 document.data()! as Map<String, dynamic>;
             String preWave = data['pre_wave'].toString();
-            var itemData = data;
             return ListTile(
               onTap: () {
                 printWarning('onTap');

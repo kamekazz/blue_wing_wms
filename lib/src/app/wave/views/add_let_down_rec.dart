@@ -101,7 +101,7 @@ class _AddLetDownRecState extends State<AddLetDownRec> {
         child: Scaffold(
       body: SingleChildScrollView(
           child: Container(
-        padding: EdgeInsets.all(
+        padding: const EdgeInsets.all(
           12.0,
         ),
         child: Column(children: [

@@ -1,7 +1,8 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
+// ignore_for_file: public_member_api_docs, sort_constructors_first, unnecessary_brace_in_string_interps, no_leading_underscores_for_local_identifiers
 // ignore_for_file: prefer_final_fields
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
 import 'package:blue_wing_wms/src/app/wave/controller/wave_methods.dart';
@@ -13,7 +14,7 @@ import '../../providers/user_provider.dart';
 
 class WaveMyList extends StatefulWidget {
   final String userData;
-  WaveMyList({
+  const WaveMyList({
     Key? key,
     required this.userData,
   }) : super(key: key);
@@ -49,11 +50,11 @@ class _WaveMyListState extends State<WaveMyList> {
       stream: _ltrStream,
       builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
         if (snapshot.hasError) {
-          return Text('Something went wrong');
+          return const Text('Something went wrong');
         }
 
         if (snapshot.connectionState == ConnectionState.waiting) {
-          return Text("Loading");
+          return const Text("Loading");
         }
 
         return ListView(
@@ -61,11 +62,41 @@ class _WaveMyListState extends State<WaveMyList> {
             Map<String, dynamic> data =
                 document.data()! as Map<String, dynamic>;
             String preWave = data['pre_wave'].toString();
-            var itemData = data;
+            String ltrSKU = data['sku'];
+            String bulkLocation = data['bulk_location'];
+            String primeLocation = data['prime_location'];
+            String maxQty = data['max_qty'].toString();
+            String qty = data['qty'].toString();
+
             return ListTile(
-              onTap: () {
-                printWarning('onTap');
-              },
+              onTap: () => showDialog(
+                context: context,
+                builder: (BuildContext context) => AlertDialog(
+                  title: Text(
+                    "SKU: ${ltrSKU}",
+                    style: const TextStyle(color: Colors.blue),
+                  ),
+                  content: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        InfoRow(title: 'FROM', val: bulkLocation),
+                        InfoRow(title: 'MAX QTY', val: maxQty),
+                        InfoRow(title: 'QTY', val: qty),
+                        InfoRow(title: 'PRE-WAVE', val: preWave),
+                        InfoRow(title: 'TO', val: primeLocation),
+                      ]),
+                  actions: <Widget>[
+                    TextButton(
+                      onPressed: () => Navigator.pop(context, 'Cancel'),
+                      child: const Text('Cancel'),
+                    ),
+                    TextButton(
+                      onPressed: () => Navigator.pop(context, 'OK'),
+                      child: const Text('Completed'),
+                    ),
+                  ],
+                ),
+              ),
               onLongPress: () {
                 printWarning('onLongPress');
                 _waveMethods.astLDR(user.username, user.uid, document.id);
@@ -76,7 +107,7 @@ class _WaveMyListState extends State<WaveMyList> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                      "From: ${data['bulk_location']}     To: ${data['prime_location']}"),
+                      "From: ${bulkLocation}     To: ${data['prime_location']}"),
                   Text("Pre Wave: $preWave"),
                   Text("equipment: ${data['equipment']}")
                 ],
@@ -85,6 +116,35 @@ class _WaveMyListState extends State<WaveMyList> {
           }).toList(),
         );
       },
+    );
+  }
+}
+
+class InfoRow extends StatelessWidget {
+  const InfoRow({
+    Key? key,
+    required this.val,
+    required this.title,
+  }) : super(key: key);
+
+  final String val;
+  final String title;
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Text(
+          "${title}:",
+          style: GoogleFonts.poppins(
+              fontSize: 24.0, fontWeight: FontWeight.w700, color: Colors.blue),
+        ),
+        Text(
+          val,
+          style: Theme.of(context).textTheme.headline2,
+        ),
+      ],
     );
   }
 }
