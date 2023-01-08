@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_final_fields
+
 import 'package:blue_wing_wms/src/app/wave/controller/wave_methods.dart';
 import 'package:blue_wing_wms/src/app/wave/views/add_let_down_rec.dart';
 import 'package:blue_wing_wms/src/constants/colors.dart';
@@ -14,50 +16,22 @@ class WaveScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          Navigator.of(context).push(
-            MaterialPageRoute(builder: (context) => const AddLetDownRec()),
-          );
-        },
-        backgroundColor: ctPrimaryColor,
-        child: const Icon(
-          Icons.add,
-          color: Colors.white70,
-        ),
-      ),
-      appBar: AppBar(title: const Text('Wave Picker')),
-      body: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 9),
-        // ignore: prefer_const_constructors
-        child: LDToList(),
-      ),
-    );
-  }
-
-  Widget searchBox() {
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 15),
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(20),
-      ),
-      child: const TextField(
-        decoration: InputDecoration(
-          border: InputBorder.none,
-          contentPadding: EdgeInsets.all(0),
-          prefixIcon: Icon(
-            Icons.search,
-            color: ctDarkColor,
-            size: 20,
-          ),
-          prefixIconConstraints: BoxConstraints(
-            maxHeight: 20,
-            minWidth: 25,
-          ),
-          hintText: 'Search',
-          hintStyle: TextStyle(color: ctDarkColor),
+    return DefaultTabController(
+      length: 3,
+      child: Scaffold(
+        appBar: AppBar(
+            title: Text("WAVE"),
+            bottom: TabBar(tabs: [
+              Tab(icon: Icon(Icons.all_inclusive)),
+              Tab(icon: Icon(Icons.alt_route_outlined)),
+              Tab(icon: Icon(Icons.settings)),
+            ])),
+        body: TabBarView(
+          children: [
+            LDToList(),
+            Icon(Icons.directions_transit),
+            Icon(Icons.directions_bike),
+          ],
         ),
       ),
     );
@@ -75,7 +49,7 @@ class LDToList extends StatefulWidget {
 class _LDToListState extends State<LDToList> {
   WaveMethods _waveMethods = WaveMethods();
 
-  final Stream<QuerySnapshot> _usersStream = FirebaseFirestore.instance
+  final Stream<QuerySnapshot> _ltrStream = FirebaseFirestore.instance
       .collection('let_down_mode')
       .where('equipment', isEqualTo: 'wave_picker')
       .where('assigned_to', isEqualTo: 'nada')
@@ -97,7 +71,7 @@ class _LDToListState extends State<LDToList> {
     User user = Provider.of<UserProvider>(context).getUser;
 
     return StreamBuilder<QuerySnapshot>(
-      stream: _usersStream,
+      stream: _ltrStream,
       builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
         if (snapshot.hasError) {
           return Text('Something went wrong');
@@ -139,3 +113,19 @@ class _LDToListState extends State<LDToList> {
     );
   }
 }
+
+
+
+
+      // floatingActionButton: FloatingActionButton(
+      //   onPressed: () {
+      //     Navigator.of(context).push(
+      //       MaterialPageRoute(builder: (context) => const AddLetDownRec()),
+      //     );
+      //   },
+      //   backgroundColor: ctPrimaryColor,
+      //   child: const Icon(
+      //     Icons.add,
+      //     color: Colors.white70,
+      //   ),
+      // ),
