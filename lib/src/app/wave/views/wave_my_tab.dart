@@ -85,14 +85,35 @@ class _WaveMyListState extends State<WaveMyList> {
                         InfoRow(title: 'PRE-WAVE', val: preWave),
                         InfoRow(title: 'TO', val: primeLocation),
                       ]),
-                  actions: <Widget>[
+                  actions: [
                     TextButton(
                       onPressed: () => Navigator.pop(context, 'Cancel'),
-                      child: const Text('Cancel'),
+                      child: const Text(
+                        'Cancel',
+                        style: TextStyle(color: ctDarkColor),
+                      ),
                     ),
-                    TextButton(
+                    ElevatedButton(
+                      style: ButtonStyle(
+                        backgroundColor:
+                            MaterialStateProperty.all(Colors.amber),
+                      ),
                       onPressed: () => Navigator.pop(context, 'OK'),
-                      child: const Text('Completed'),
+                      child: const Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 2),
+                        child: Text('issue'),
+                      ),
+                    ),
+                    ElevatedButton(
+                      style: ButtonStyle(
+                        backgroundColor:
+                            MaterialStateProperty.all(Colors.green),
+                      ),
+                      onPressed: () => Navigator.pop(context, 'OK'),
+                      child: const Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 2),
+                        child: Text('Completed'),
+                      ),
                     ),
                   ],
                 ),
