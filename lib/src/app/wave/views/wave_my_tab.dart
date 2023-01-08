@@ -1,17 +1,22 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 // ignore_for_file: prefer_final_fields
-
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
 import 'package:blue_wing_wms/src/app/wave/controller/wave_methods.dart';
 import 'package:blue_wing_wms/src/constants/colors.dart';
 import 'package:blue_wing_wms/src/utils/helper/print_log.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:provider/provider.dart';
 
-import '../../auth/models/user_model.dart';
+import '../../auth/models/user_model.dart' as model;
 import '../../providers/user_provider.dart';
 
 class WaveMyList extends StatefulWidget {
-  const WaveMyList({super.key});
+  final String userData;
+  WaveMyList({
+    Key? key,
+    required this.userData,
+  }) : super(key: key);
 
   @override
   State<WaveMyList> createState() => _WaveMyListState();
@@ -19,12 +24,6 @@ class WaveMyList extends StatefulWidget {
 
 class _WaveMyListState extends State<WaveMyList> {
   WaveMethods _waveMethods = WaveMethods();
-
-  final Stream<QuerySnapshot> _ltrStream = FirebaseFirestore.instance
-      .collection('let_down_mode')
-      .where('equipment', isEqualTo: 'wave_picker')
-      .where('assigned_to', isEqualTo: 'nada')
-      .snapshots();
 
   Color progressStatusColor(String val) {
     switch (val) {
@@ -39,7 +38,12 @@ class _WaveMyListState extends State<WaveMyList> {
 
   @override
   Widget build(BuildContext context) {
-    User user = Provider.of<UserProvider>(context).getUser;
+    model.User user = Provider.of<UserProvider>(context).getUser;
+    Stream<QuerySnapshot> _ltrStream = FirebaseFirestore.instance
+        .collection('let_down_mode')
+        .where('equipment', isEqualTo: 'wave_picker')
+        .where('assigned_to_id', isEqualTo: user.uid)
+        .snapshots();
 
     return StreamBuilder<QuerySnapshot>(
       stream: _ltrStream,
