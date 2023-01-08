@@ -74,8 +74,12 @@ class LDToList extends StatefulWidget {
 
 class _LDToListState extends State<LDToList> {
   WaveMethods _waveMethods = WaveMethods();
-  final Stream<QuerySnapshot> _usersStream =
-      FirebaseFirestore.instance.collection('let_down_mode').snapshots();
+
+  final Stream<QuerySnapshot> _usersStream = FirebaseFirestore.instance
+      .collection('let_down_mode')
+      .where('equipment', isEqualTo: 'wave_picker')
+      .where('assigned_to', isEqualTo: 'nada')
+      .snapshots();
 
   Color progressStatusColor(String val) {
     switch (val) {
@@ -125,6 +129,7 @@ class _LDToListState extends State<LDToList> {
                   Text(
                       "From: ${data['bulk_location']}     To: ${data['prime_location']}"),
                   Text("Pre Wave: $preWave"),
+                  Text("equipment: ${data['equipment']}")
                 ],
               ),
             );
