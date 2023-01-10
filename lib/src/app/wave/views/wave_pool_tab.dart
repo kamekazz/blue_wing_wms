@@ -63,7 +63,8 @@ class _WavePoolState extends State<WavePool> {
               },
               onLongPress: () {
                 printWarning('onLongPress');
-                _waveMethods.astLDR(user.username, user.uid, document.id);
+                _waveMethods.astLDRtoMyList(
+                    user.username, user.uid, document.id);
               },
               tileColor: progressStatusColor(data['status']),
               title: Text(data['sku']),

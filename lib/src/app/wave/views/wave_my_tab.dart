@@ -98,7 +98,10 @@ class _WaveMyListState extends State<WaveMyList> {
                         backgroundColor:
                             MaterialStateProperty.all(Colors.amber),
                       ),
-                      onPressed: () => Navigator.pop(context, 'OK'),
+                      onPressed: () {
+                        Navigator.pop(context, 'OK');
+                        _waveMethods.reportIssue(document.id);
+                      },
                       child: const Padding(
                         padding: EdgeInsets.symmetric(horizontal: 2),
                         child: Text('issue'),
@@ -109,7 +112,17 @@ class _WaveMyListState extends State<WaveMyList> {
                         backgroundColor:
                             MaterialStateProperty.all(Colors.green),
                       ),
-                      onPressed: () => Navigator.pop(context, 'OK'),
+                      onPressed: () {
+                        Navigator.pop(context, 'OK');
+                        _waveMethods.completedLDR(
+                            user.username,
+                            user.uid,
+                            document.id,
+                            ltrSKU,
+                            preWave,
+                            primeLocation,
+                            bulkLocation);
+                      },
                       child: const Padding(
                         padding: EdgeInsets.symmetric(horizontal: 2),
                         child: Text('Completed'),
@@ -120,7 +133,7 @@ class _WaveMyListState extends State<WaveMyList> {
               ),
               onLongPress: () {
                 printWarning('onLongPress');
-                _waveMethods.astLDR(user.username, user.uid, document.id);
+                _waveMethods.astLDRtoPool(document.id);
               },
               tileColor: progressStatusColor(data['status']),
               title: Text(data['sku']),
