@@ -21,9 +21,9 @@ class WaveScreen extends StatelessWidget {
         appBar: AppBar(
             title: const Text("WAVE"),
             bottom: const TabBar(tabs: [
-              Tab(icon: Icon(Icons.all_inclusive)),
-              Tab(icon: Icon(Icons.alt_route_outlined)),
-              Tab(icon: Icon(Icons.settings)),
+              Tab(text: "POOL"),
+              Tab(text: "MY LIST"),
+              Tab(text: "CONFIG"),
             ])),
         body: TabBarView(
           children: [
