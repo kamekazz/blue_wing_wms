@@ -72,27 +72,78 @@ class _WaveMyListState extends State<WaveMyList> {
               onTap: () => showDialog(
                 context: context,
                 builder: (BuildContext context) => AlertDialog(
-                  title: Text(
-                    "SKU: ${ltrSKU}",
-                    style: const TextStyle(color: Colors.blue),
-                  ),
                   content: Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        InfoRow(title: 'FROM', val: bulkLocation),
-                        InfoRow(title: 'MAX QTY', val: maxQty),
-                        InfoRow(title: 'QTY', val: qty),
-                        InfoRow(title: 'PRE-WAVE', val: preWave),
-                        InfoRow(title: 'TO', val: primeLocation),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Text(
+                              "SKU: ${ltrSKU}",
+                              style: const TextStyle(
+                                  color: Colors.blue,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          ],
+                        ),
+                        CkImage(
+                          sku: ltrSKU,
+                        ),
+                        Column(
+                          children: [
+                            InfoRow(title: 'FROM', val: bulkLocation),
+                            InfoRow(title: 'MAX QTY', val: maxQty),
+                            InfoRow(title: 'QTY', val: qty),
+                            InfoRow(title: 'PRE-WAVE', val: preWave),
+                            InfoRow(title: 'TO', val: primeLocation),
+                          ],
+                        ),
+                        Column(
+                          children: [
+                            SizedBox(
+                                width: double.infinity,
+                                child: ElevatedButton(
+                                  style: ButtonStyle(
+                                    backgroundColor:
+                                        MaterialStateProperty.all(Colors.green),
+                                  ),
+                                  onPressed: () {
+                                    Navigator.pop(context, 'OK');
+                                    _waveMethods.completedLDR(
+                                        user.username,
+                                        user.uid,
+                                        document.id,
+                                        ltrSKU,
+                                        preWave,
+                                        primeLocation,
+                                        bulkLocation);
+                                  },
+                                  child: const Padding(
+                                    padding:
+                                        EdgeInsets.symmetric(horizontal: 2),
+                                    child: Text('Completed'),
+                                  ),
+                                )),
+                            SizedBox(
+                              width: double.infinity,
+                              child: ElevatedButton(
+                                style: ButtonStyle(
+                                  backgroundColor:
+                                      MaterialStateProperty.all(Colors.grey),
+                                ),
+                                onPressed: () =>
+                                    Navigator.pop(context, 'Cancel'),
+                                child: const Text(
+                                  'Cancel',
+                                  style: TextStyle(color: ctDarkColor),
+                                ),
+                              ),
+                            ),
+                          ],
+                        )
                       ]),
                   actions: [
-                    TextButton(
-                      onPressed: () => Navigator.pop(context, 'Cancel'),
-                      child: const Text(
-                        'Cancel',
-                        style: TextStyle(color: ctDarkColor),
-                      ),
-                    ),
                     ElevatedButton(
                       style: ButtonStyle(
                         backgroundColor:
@@ -105,27 +156,6 @@ class _WaveMyListState extends State<WaveMyList> {
                       child: const Padding(
                         padding: EdgeInsets.symmetric(horizontal: 2),
                         child: Text('issue'),
-                      ),
-                    ),
-                    ElevatedButton(
-                      style: ButtonStyle(
-                        backgroundColor:
-                            MaterialStateProperty.all(Colors.green),
-                      ),
-                      onPressed: () {
-                        Navigator.pop(context, 'OK');
-                        _waveMethods.completedLDR(
-                            user.username,
-                            user.uid,
-                            document.id,
-                            ltrSKU,
-                            preWave,
-                            primeLocation,
-                            bulkLocation);
-                      },
-                      child: const Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 2),
-                        child: Text('Completed'),
                       ),
                     ),
                   ],
@@ -151,6 +181,21 @@ class _WaveMyListState extends State<WaveMyList> {
         );
       },
     );
+  }
+}
+
+class CkImage extends StatelessWidget {
+  final String sku;
+  const CkImage({
+    Key? key,
+    required this.sku,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    String url =
+        "https://d3501hjdis3g5w.cloudfront.net/images/products/zoom/${sku}-1.jpg";
+    return Image.network(url);
   }
 }
 
