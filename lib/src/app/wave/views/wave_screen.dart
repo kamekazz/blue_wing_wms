@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_final_fields
 
+import 'package:blue_wing_wms/src/app/LDR/views/pool_tab.dart';
 import 'package:blue_wing_wms/src/app/wave/views/wave_my_tab.dart';
 import 'package:blue_wing_wms/src/app/wave/views/wave_pool_tab.dart';
 import 'package:flutter/material.dart';
@@ -27,7 +28,7 @@ class WaveScreen extends StatelessWidget {
             ])),
         body: TabBarView(
           children: [
-            const WavePool(),
+            PoolTab(queryEquipment: 'wave_picker'),
             WaveMyList(
               userData: user.uid,
             ),
