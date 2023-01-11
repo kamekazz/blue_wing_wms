@@ -194,7 +194,7 @@ class CkImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     String url =
-        "https://d3501hjdis3g5w.cloudfront.net/images/products/zoom/${sku}-1.jpg";
+        "https://d3501hjdis3g5w.cloudfront.net/images/products/zoom/${sku.toLowerCase()}-1.jpg";
     return Image.network(url);
   }
 }
